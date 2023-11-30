@@ -140,6 +140,8 @@ are:
 </section>
 
 ## Palettes
+### Warm Palettes
+### Cool Palettes
 <section style="width: 975px; height: 100px;
                 margin: 1%;
                 padding: 0;
