@@ -1,0 +1,57 @@
+:root {
+    --pristine-white: hsl(0, 0%, 100%);
+    --soft-silver-gray: hsl(0, 0%, 75%);
+    --peach-cream-orange: hsl(30, 44%, 70%);
+    --oceans-depths-teal: hsl(194, 94%, 26%);
+    --absolute-black: hsl(0, 0%, 0%);
+}
+#name-title-section {
+    background-image: url("images/programming_profile_header.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5vh 0;
+}
+#name-title-section h1 {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: var(--absolute-black);
+}
+#oliver-lear-title-logo {
+    width: calc((12.75vh + 12.75vw) / 2);
+    height: calc((12.75vh + 12.75vw) / 2);
+    margin: 0 5vw;
+}
+.promo-img {
+    width: 10vw;
+    height: 10vw;
+}
+#oliver-lear-logo-promo-img {
+    border-radius: 50%;
+    border: calc((0.35vh + 0.35vw) / 2) solid var(--peach-cream-orange);
+}
+#promo-section {
+    background-color: var(--peach-cream-orange);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.promo-container {
+    width: 100%;
+}
+.specific-promo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
