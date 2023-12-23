@@ -9,6 +9,8 @@ websites.
 # Codecademy
 [Link](https://www.codecademy.com/business)
 
+<img src="../document_images/case_studies/codecademy_business.png" style="width: 90vw;">
+
 *Note*: multiple styles and variations of colors are used throughout the site
 in various ways.
 
@@ -46,7 +48,8 @@ Number of colors in palette: $$$ in total and $$$ in palette
     "Blue Frost Whisper White" - **#F5FCFF**
 ## Color Palette
 Include analysis of the colors used in the site and how they are used.
-<section style="width: 975px; height: 100px;
+<!----------------------Codecademy-Color-Palette-Text------------------------>
+<section style="width: 94vw; height: 10vh;
                 margin: 1%;
                 padding: 0;
                 display: inline-flex;
@@ -109,7 +112,8 @@ Include analysis of the colors used in the site and how they are used.
 <h4 style="padding: 0; margin: 5%;">Page Background</h4>
 </div>
 </section>
-<section style="width: 1000px; height: 270px;
+<!-------------------------Codecademy-Color-Palette-------------------------->
+<section style="width: 95vw; height: 20vh;
                 display: inline-flex;
                 flex-direction: row;
                 align-items: center;
