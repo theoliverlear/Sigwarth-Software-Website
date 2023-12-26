@@ -4,8 +4,11 @@
     --peach-cream-orange: hsl(30, 44%, 70%);
     --oceans-depths-teal: hsl(194, 94%, 26%);
     --absolute-black: hsl(0, 0%, 0%);
+    --muddy-white: hsl(43, 6%, 79%);
 }
 #name-title-section {
+    border-top: var(--absolute-black) calc((0.35vh + 0.35vw) / 2) solid;
+    border-bottom: var(--absolute-black) calc((0.35vh + 0.35vw) / 2) solid;
     background-image: url("images/programming_profile_header.jpeg");
     background-size: cover;
     background-position: center;
@@ -16,10 +19,12 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 5vh 0;
+
 }
 #name-title-section h1 {
     width: 100%;
     height: 80%;
+    margin: 10% 0;
     text-align: center;
     color: var(--absolute-black);
 }
@@ -35,6 +40,48 @@
 #oliver-lear-logo-promo-img {
     border-radius: 50%;
     border: calc((0.35vh + 0.35vw) / 2) solid var(--peach-cream-orange);
+}
+.title-image {
+    border-radius: 50%;
+    width: 13vw;
+    height: 13vw;
+}
+#intro-section {
+    background-color: var(--soft-silver-gray);
+    height: auto;
+    width: 80%;
+    display: flex;
+    padding: 5vh 0 2.5vh 0;
+    margin: 10vh 10%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 15%;
+    box-shadow: var(--peach-cream-orange) 0 0 0.5vw 0.5vw;
+
+}
+#oliver-lear-portrait {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 5%;
+    border: calc((0.35vh + 0.35vw) / 2) solid var(--peach-cream-orange);
+}
+#intro-section p {
+    width: 80%;
+    margin: 0 10%;
+}
+#intro-name {
+    margin: 0;
+    padding: 1vh 0;
+}
+#intro-social-handle {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+#intro-profession-text {
+    margin: 2vh 0;
 }
 #promo-section {
     background-color: var(--peach-cream-orange);
