@@ -44,7 +44,9 @@
 .title-image {
     border-radius: 50%;
     width: 13vw;
-    height: 13vw;
+    height: auto;
+    max-width: 20vh;
+    max-height: 20vh;
 }
 #intro-section {
     background-color: var(--soft-silver-gray);
