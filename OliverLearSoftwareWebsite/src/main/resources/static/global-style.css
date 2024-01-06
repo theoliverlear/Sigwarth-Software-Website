@@ -2,15 +2,17 @@
     --pristine-white: hsl(0, 0%, 100%);
     --soft-silver-gray: hsl(0, 0%, 75%);
     --peach-cream-orange: hsl(30, 44%, 70%);
+    --charcoal-dust: hsl(0, 3%, 14%);
     --absolute-black: hsl(0, 0%, 0%);
+    --less-muddy-white: hsl(43, 6%, 90%);
     --muddy-white: hsl(60, 4%, 85%);
 }
 body {
-    font-family: 'Roboto Light', sans-serif;
+    /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-family: 'DialogInput', sans-serif;
     margin: 0;
     padding: 0;
-    /*background-color: var(--pristine-white);*/
-    background-color: var(--muddy-white);
+    background-color: var(--less-muddy-white);
 }
 header {
     background-color: var(--soft-silver-gray);
@@ -23,7 +25,7 @@ header {
     border-bottom: calc((0.15vh + 0.15vw) / 2) solid var(--absolute-black);
 }
 nav {
-    background-color: var(--peach-cream-orange);
+    background-color: var(--oceans-depths-teal);
     height: 5vh;
     width: 100%;
     top: 0;
@@ -52,5 +54,20 @@ h2 {
 h3 {
     font-weight: 300;
     font-size: calc((3vh + 3vw) / 2);
+    color: var(--absolute-black);
+}
+h4 {
+    font-weight: 300;
+    font-size: calc((2.5vh + 2.5vw) / 2);
+    color: var(--absolute-black);
+}
+h5 {
+    font-weight: 300;
+    font-size: calc((2vh + 2vw) / 2);
+    color: var(--absolute-black);
+}
+p {
+    font-weight: 300;
+    font-size: calc((1.5vh + 1.5vw) / 2);
     color: var(--absolute-black);
 }
