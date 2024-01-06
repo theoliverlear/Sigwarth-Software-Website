@@ -1,4 +1,3 @@
-
 #name-title-section {
     border-top: var(--absolute-black) calc((0.35vh + 0.35vw) / 2) solid;
     border-bottom: var(--absolute-black) calc((0.35vh + 0.35vw) / 2) solid;
@@ -12,7 +11,6 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 5vh 0;
-
 }
 #name-title-section h1 {
     width: 100%;
@@ -25,11 +23,6 @@
     width: calc((3.75vh + 3.75vw) / 2);
     height: auto;
 }
-/*#oliver-lear-title-logo {*/
-/*    width: calc((12.75vh + 12.75vw) / 2);*/
-/*    height: calc((12.75vh + 12.75vw) / 2);*/
-/*    margin: 0 5vw;*/
-/*}*/
 .promo-img {
     width: 10vw;
     height: 10vw;
@@ -46,7 +39,6 @@
     max-height: 20vh;
 }
 #intro-section {
-    /*background-color: var(--soft-silver-gray);*/
     height: auto;
     width: 80%;
     display: flex;
@@ -58,19 +50,9 @@
     text-align: center;
     border-radius: 15%;
     box-shadow: var(--muddy-white) 0 0 0.5vw 0.5vw;
-
-    /*background-image: url("images/abstract_background.svg");*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-}
-#intro-section-text {
-    background-color: var(--muddy-white);
-    width: 80%;
-    border-radius: 15%;
-    padding: 5vh 10%;
-    margin: 10% 10%;
 }
 #logo-handle-div {
     width: 100%;
@@ -85,6 +67,17 @@
     border-radius: 5%;
     border: calc((0.35vh + 0.35vw) / 2) solid var(--muddy-white);
 }
+#contact-button-div {
+    background-color: var(--pristine-white);
+    border: calc((0.35vh + 0.35vw) / 2) solid var(--muddy-white);
+    width: 14vw;
+    height: 5vh;
+    border-radius: calc((2.35vh + 2.35vw) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vh 0 0 0;
+}
 #intro-section p {
     width: 80%;
     margin: 0 10%;
@@ -97,12 +90,26 @@
     margin: 0 1vw;
     padding: 0;
     font-style: italic;
+    /*text-decoration: underline;*/
 }
 #intro-profession-text {
     margin: 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#intro-section-text {
+    background-color: var(--muddy-white);
+    width: 80%;
+    border-radius: 15%;
+    padding: 5vh 10%;
+    margin: 10% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 #promo-section {
-    /*background-color: var(--oceans-depths-teal);*/
     height: auto;
     width: 100%;
     display: flex;
@@ -134,13 +141,14 @@
 }
 .promo-item {
     flex-basis: calc((20vh + 20vw) / 2);
-    /*background-color: var(--oceans-depths-teal);*/
     box-shadow: var(--muddy-white) 0 0 0.5vw 0.5vw;
     padding: calc((2.35vh + 2.35vw) / 2) calc((4.35vh + 4.35vw) / 2);
     border-radius: 15%;
     background-color: var(--transparent-muddy-white);
-    /*background-image: url("images/abstract_background.svg");*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
+}
+
+@media (max-width: 1100px) {
+  .promo-item {
+    padding: calc((2.35vh + 2.35vw) / 2) calc((2.175vh + 2.175vw) / 2);
+  }
 }
