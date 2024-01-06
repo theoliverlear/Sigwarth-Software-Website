@@ -7,33 +7,64 @@
     <link rel="stylesheet" href="../static/global-style.css">
 </head>
 <body>
+<!--------------------------------Heading------------------------------------>
 <header>
     <section>
+        <!------------------------Nav-Bar------------------------------------>
         <nav>
+
             <ul>
-                <li><h4>Example Nav</h4></li>
-                <li><h4>Example Nav</h4></li>
-                <li><h4>Example Nav</h4></li>
-                <li><h4>Example Nav</h4></li>
+                <img id="hamburger-menu-icon"
+                     src="../static/images/hamburger_menu.svg"
+                     alt="hamburger menu icon">
+                <li class="hamburger-list-items">
+                    <h4>Home</h4>
+                </li>
+                <li class="hamburger-list-items">
+                    <h4>Projects</h4>
+                </li>
+                <li class="hamburger-list-items">
+                    <h4>About</h4>
+                </li>
+                <li class="hamburger-list-items">
+                    <h4>Contact</h4>
+                </li>
             </ul>
         </nav>
     </section>
 </header>
+<!---------------------------Site-Title-Section------------------------------>
 <section id="name-title-section">
-<!--    <h1>Oliver Lear Software</h1>-->
-    <img id="java-title-logo" class="title-image" src="../static/images/java_logo_3.png" alt="java logo">
-    <img id="oliver-lear-title-logo" class="title-image" src="../static/images/oliver_lear_logo.png" alt="oliver lear logo">
-    <img id="terminal-title-logo" class="title-image" src="../static/images/terminal_logo.png" alt="terminal logo">
-    <img id="python-title-logo" class="title-image" src="../static/images/python_logo.png" alt="python logo">
-    <!--        <h3>Tag about my skills and site</h3>-->
+    <!--------------------------Java-Logo------------------------------------>
+    <img id="java-title-logo"
+         class="title-image"
+         src="../static/images/java_logo_3.png"
+         alt="java logo">
+    <!--------------------------Terminal-Logo-------------------------------->
+    <img id="terminal-title-logo"
+         class="title-image"
+         src="../static/images/terminal_logo.png"
+         alt="terminal logo">
+    <img id="python-title-logo"
+         class="title-image"
+         src="../static/images/python_logo.png"
+         alt="python logo">
 </section>
 <main>
+    <!---------------------------Intro-Section------------------------------->
     <section id="intro-section">
-
-        <img id="oliver-lear-portrait" src="../static/images/oliver_sigwarth_portrait.png">
-        <div>
+        <img id="oliver-lear-portrait"
+             alt="oliver lear portrait"
+             src="../static/images/oliver_sigwarth_portrait.png">
+        <div id="intro-section-text">
             <h2 id="intro-name">Oliver Lear Sigwarth</h2>
-            <h4 id="intro-social-handle">@theoliverlear</h4>
+            <div id="logo-handle-div">
+                <img id="oliver-lear-nav-logo"
+                     class="title-image"
+                     src="../static/images/oliver_lear_logo.png"
+                     alt="oliver lear logo">
+                <h4 id="intro-social-handle">@theoliverlear</h4>
+            </div>
             <h3 id="intro-profession-text">Software Engineer</h3>
             <p>
                 Text about me and my skills. Text about me and my skills.
@@ -46,53 +77,70 @@
             </p>
         </div>
     </section>
+    <!--------------------------Project-Promo-Section------------------------>
     <section id="promo-section">
-        <!--            <h2>What I do</h2>-->
+        <!------------------------Build-Programs----------------------------->
         <section class="promo-container" id="programs-people-need-section">
-            <h2>Build Programs People Need</h2>
-            <div id="programs-people-need-item-container" class="specific-promo-container">
-                <div>
+            <h2 class="promo-title">Build Programs People Need</h2>
+            <div id="programs-people-need-item-container"
+                 class="specific-promo-container">
+                <div class="promo-item">
                     <h3>Crypto Trader</h3>
-                    <img class="promo-img" src="../static/images/crypto_logo.svg"
+                    <img class="promo-img"
+                         src="../static/images/crypto_logo.svg"
                          alt="crypto trader">
                 </div>
-                <div>
+                <div class="promo-item">
                     <h3>Oliver's Additions</h3>
-                    <img class="promo-img" src="../static/images/minecraft_block.webp"
+                    <img class="promo-img"
+                         src="../static/images/minecraft_block.webp"
                          alt="minecraft block">
                 </div>
-                <div>
+                <div class="promo-item">
                     <h3>Dota Data Hub</h3>
-                    <img class="promo-img" src="../static/images/dota_data_logo.png"
+                    <img class="promo-img"
+                         src="../static/images/dota_data_logo.png"
                          alt="dota data hub">
                 </div>
             </div>
         </section>
+        <!------------------------Design-Web-Apps---------------------------->
         <section id="design-web-apps-section" class="promo-container">
-            <h2>Design web apps</h2>
+            <h2 class="promo-title">Design web apps</h2>
             <div id="design-web-apps-container" class="specific-promo-container">
-                <div>
+                <div class="promo-item">
                     <h3>Random API</h3>
                     <img class="promo-img" src="../static/images/random_api_logo.png"
                          alt="random api">
                 </div>
-                <div>
+                <div class="promo-item">
                     <h3>Oliver Lear Software</h3>
                     <img class="promo-img" src="../static/images/oliver_lear_logo.png"
                          alt="oliver lear software" id="oliver-lear-logo-promo-img">
                 </div>
             </div>
-            <h2>Stylize my work</h2>
-            <div id="stylize-work-container" class="specific-promo-container">
-                <div>
-                    <h3>Style Guide</h3>
-                    <img class="promo-img" src="../static/images/style_guide_logo.png"
-                         alt="style guide">
+            <section>
+                <h2 class="promo-title">Stylize my work</h2>
+                <div id="stylize-work-container"
+                     class="specific-promo-container">
+                    <div class="promo-item">
+                        <h3>Style Guide</h3>
+                        <img class="promo-img"
+                             src="../static/images/style_guide_logo.png"
+                             alt="style guide">
+                    </div>
                 </div>
-
-            </div>
+            </section>
         </section>
     </section>
 </main>
+<footer>
+
+</footer>
+<script src="../static/script/global-script.js"></script>
+<noscript>
+    <h1>JavaScript is disabled on your browser</h1>
+    <h2>Enable JavaScript to view this page</h2>
+</noscript>
 </body>
 </html>
