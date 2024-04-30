@@ -1,13 +1,13 @@
-package org.theoliverlear.oliverlearsoftwarewebsite;
+package org.theoliverlear.sigwarthsoftware;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OliverLearSoftwareWebsiteApplication {
+public class SigwarthSoftwareApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OliverLearSoftwareWebsiteApplication.class, args);
+        SpringApplication.run(SigwarthSoftwareApplication.class, args);
     }
 
 }

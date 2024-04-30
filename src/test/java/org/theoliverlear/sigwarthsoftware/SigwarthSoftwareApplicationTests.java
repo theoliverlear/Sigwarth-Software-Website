@@ -1,10 +1,10 @@
-package org.theoliverlear.oliverlearsoftwarewebsite;
+package org.theoliverlear.sigwarthsoftware;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OliverLearSoftwareWebsiteApplicationTests {
+class SigwarthSoftwareApplicationTests {
 
     @Test
     void contextLoads() {
