@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html"
+      dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Oliver Lear Software</title>
-    <link rel="stylesheet" href="../static/home-style.css">
-    <link rel="stylesheet" href="../static/global-style.css">
+    <link rel="stylesheet" href="../static/style/home-style.css">
+    <link rel="stylesheet" href="../static/style/global-style.css">
 </head>
 <body>
 <!--------------------------------Heading------------------------------------>
@@ -12,55 +14,70 @@
     <section>
         <!------------------------Nav-Bar------------------------------------>
         <nav>
-            <ul>
-                <img id="hamburger-menu-icon"
-                     src="../static/images/hamburger_menu.svg"
-                     alt="hamburger menu icon">
-                <li class="hamburger-list-items">
-                    <h4>Home</h4>
-                </li>
-                <li class="hamburger-list-items">
-                    <h4>Projects</h4>
-                </li>
-                <li class="hamburger-list-items">
-                    <h4>About</h4>
-                </li>
-                <li class="hamburger-list-items">
-                    <h4>Contact</h4>
-                </li>
-            </ul>
+            <div id="nav-container">
+                <div>
+                    <img id="hamburger-menu-icon"
+                         src="../static/images/hamburger_menu.svg"
+                         alt="hamburger menu icon">
+                </div>
+                <div class="hamburger-list-items nav-bar-item">
+                    <h4 class="nav-bar-item-text">Home</h4>
+                </div>
+                <div class="hamburger-list-items nav-bar-item">
+                    <h4 class="nav-bar-item-text">Tools</h4>
+                </div>
+                <div class="hamburger-list-items nav-bar-item">
+                    <h4 class="nav-bar-item-text">Projects</h4>
+                </div>
+                <div class="hamburger-list-items nav-bar-item">
+                    <h4 class="nav-bar-item-text">About</h4>
+                </div>
+                <div class="hamburger-list-items nav-bar-item">
+                    <h4 class="nav-bar-item-text">Contact</h4>
+                </div>
+            </div>
         </nav>
     </section>
 </header>
-
 <main>
     <!---------------------------Intro-Section------------------------------->
     <section id="intro-section">
-        <img id="oliver-lear-portrait"
-             alt="oliver lear portrait"
-             src="../static/images/oliver_sigwarth_portrait.png">
+        <div id="oliver-lear-portrait-div">
+            <img id="oliver-lear-portrait-img"
+                 alt="oliver lear portrait"
+                 src="../static/images/oliver_sigwarth_portrait.png">
+        </div>
         <div id="intro-section-text">
-            <h2 id="intro-name">Oliver Lear Sigwarth</h2>
+            <div id="intro-name-div">
+                <h2 id="intro-name-text">Oliver Lear Sigwarth</h2>
+            </div>
             <div id="logo-handle-div">
-                <img id="oliver-lear-nav-logo"
-                     class="title-image"
-                     src="../static/images/oliver_lear_logo.png"
-                     alt="oliver lear logo">
-                <h4 id="intro-social-handle">@theoliverlear</h4>
+                <div id="oliver-lear-logo-div">
+                    <img id="oliver-lear-logo-img"
+                         class="title-image"
+                         src="../static/images/oliver_lear_logo.png"
+                         alt="oliver lear logo">
+                </div>
+                <div id="intro-social-handle-div"> <!-- insert dropdown with socials class here -->
+                    <h4 id="intro-social-handle-text">@theoliverlear</h4>
+                </div>
             </div>
-            <h3 id="intro-profession-text">Software Engineer</h3>
+        </div>
+        <h3 id="intro-profession-text">Software Engineer</h3>
+        <div>
             <p>
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
-                Text about me and my skills. Text about me and my skills.
+                I am a passionate proficient programmer with a focus on full
+                stack web development. I have experience with Java, Python,
+                JavaScript, HTML, CSS, SQL, unit testing, and the command
+                line. I particularly have experience with Java Spring Boot,
+                where I have built a variety of apps that you can find on this
+                site. If you have any questions or would like to work with me,
+                please feel free to...
             </p>
-            <div id="contact-button-div">
-                <h4 id="contact-button">Contact</h4>
-            </div>
+        </div>
+        <div id="contact-button-div" class="small-button">
+            <h5 id="contact-button-text" class="small-button-text">Contact Me</h5>
+        </div>
         </div>
 
     </section>
@@ -141,7 +158,7 @@
 </main>
 <footer>
     <section id="footer-small-text-section">
-        <h5>&copy Oliver Lear Software</h5>
+        <h5>&copy Sigwarth Software</h5>
     </section>
 </footer>
 <script src="../static/script/global-script.js"></script>
