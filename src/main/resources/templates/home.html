@@ -4,9 +4,13 @@
       dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>Oliver Lear Software</title>
-    <link rel="stylesheet" href="../static/style/home-style.css">
-    <link rel="stylesheet" href="../static/style/global-style.css">
+    <title>Sigwarth Software</title>
+    <link rel="stylesheet" href="../static/style/global-style.css"
+          th:href="@{/style/global-style.css}">
+    <link rel="stylesheet" href="../static/style/home-style.css"
+          th:href="@{/style/home-style.css}">
+    <link rel="icon" href="../static/favicon/sigwarth_software_logo_cropped_transparent.ico"
+          th:href="@{/favicon/sigwarth_software_logo_cropped_transparent.ico}">
 </head>
 <body>
 <!--------------------------------Heading------------------------------------>
@@ -17,6 +21,7 @@
             <div id="nav-container">
                 <div>
                     <img id="hamburger-menu-icon"
+                         th:src="@{/images/hamburger_menu.svg}"
                          src="../static/images/hamburger_menu.svg"
                          alt="hamburger menu icon">
                 </div>
@@ -45,6 +50,7 @@
         <div id="oliver-lear-portrait-div">
             <img id="oliver-lear-portrait-img"
                  alt="oliver lear portrait"
+                 th:src="@{/images/oliver_sigwarth_portrait.png}"
                  src="../static/images/oliver_sigwarth_portrait.png">
         </div>
         <div id="intro-section-text">
@@ -55,6 +61,7 @@
                 <div id="oliver-lear-logo-div">
                     <img id="oliver-lear-logo-img"
                          class="title-image"
+                         th:src="@{/images/oliver_lear_logo.png}"
                          src="../static/images/oliver_lear_logo.png"
                          alt="oliver lear logo">
                 </div>
@@ -81,21 +88,24 @@
         </div>
 
     </section>
-    <!---------------------------Site-Title-Section------------------------------>
+    <!---------------------------Site-Title-Section-------------------------->
     <section id="name-title-section">
-        <!--------------------------Java-Logo------------------------------------>
+        <!--------------------------Java-Logo-------------------------------->
         <img id="java-title-logo"
              class="title-image"
+             th:src="@{/images/java_logo_3.png}"
              src="../static/images/java_logo_3.png"
              alt="java logo">
-        <!--------------------------Terminal-Logo-------------------------------->
+        <!--------------------------Terminal-Logo---------------------------->
         <img id="terminal-title-logo"
              class="title-image"
              src="../static/images/terminal_logo.png"
+             th:src="@{/images/terminal_logo.png}"
              alt="terminal logo">
         <img id="python-title-logo"
              class="title-image"
              src="../static/images/python_logo.png"
+             th:src="@{/images/python_logo.png}"
              alt="python logo">
     </section>
     <!--------------------------Project-Promo-Section------------------------>
@@ -109,18 +119,21 @@
                     <h3>Crypto Trader</h3>
                     <img class="promo-img"
                          src="../static/images/crypto_logo.svg"
+                         th:src="@{/images/crypto_logo.svg}"
                          alt="crypto trader">
                 </div>
                 <div class="promo-item">
                     <h3>Oliver's Additions</h3>
                     <img class="promo-img"
                          src="../static/images/minecraft_block.webp"
+                         th:src="@{/images/minecraft_block.webp}"
                          alt="minecraft block">
                 </div>
                 <div class="promo-item">
                     <h3>Dota Data Hub</h3>
                     <img class="promo-img"
                          src="../static/images/dota_data_logo.png"
+                         th:src="@{/images/dota_data_logo.png}"
                          alt="dota data hub">
                 </div>
             </div>
@@ -132,11 +145,13 @@
                 <div class="promo-item">
                     <h3>Random API</h3>
                     <img class="promo-img" src="../static/images/random_api_logo.png"
+                         th:src="@{/images/random_api_logo.png}"
                          alt="random api">
                 </div>
                 <div class="promo-item">
                     <h3>Oliver Lear Software</h3>
                     <img class="promo-img" src="../static/images/oliver_lear_logo.png"
+                         th:src="@{/images/oliver_lear_logo.png}"
                          alt="oliver lear software" id="oliver-lear-logo-promo-img">
                 </div>
             </div>
@@ -150,6 +165,7 @@
                     <h3>Style Guide</h3>
                     <img class="promo-img"
                          src="../static/images/style_guide_logo.png"
+                         th:src="@{/images/style_guide_logo.png}"
                          alt="style guide">
                 </div>
             </div>
@@ -158,10 +174,13 @@
 </main>
 <footer>
     <section id="footer-small-text-section">
-        <h5>&copy Sigwarth Software</h5>
+        <h5>&copy 2024 Sigwarth Software</h5>
     </section>
 </footer>
-<script src="../static/script/globalScript.js"></script>
+<script src="../static/script/bundle.js" type="module"
+        th:src="@{/script/bundle.js}"></script>
+<script src="../static/script/globalScript.js" type="module"
+        th:src="@{/script/globalScript.js}"></script>
 <noscript>
     <h1>JavaScript is disabled on your browser</h1>
     <h2>Enable JavaScript to view this page</h2>
