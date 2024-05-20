@@ -1,62 +1,49 @@
-$pristine-white: hsl(0, 0%, 100%);
-$soft-silver-gray: hsl(0, 0%, 75%);
-$peach-cream-orange: hsl(30, 44%, 70%);
-$aquamarine: hsl(196, 100%, 50%);
-$oceans-depths-teal: hsl(194, 94%, 26%);
-$transparent-oceans-depths-teal: hsla(194, 94%, 26%, 0.7);
-$charcoal-dust: hsl(0, 3%, 14%);
-$transparent-charcoal-dust: hsla(0, 3%, 14%, 0.9);
-$absolute-black: hsl(0, 0%, 0%);
-$less-muddy-white: hsl(43, 6%, 90%);
-$muddy-white: hsl(43, 6%, 79%);
-$transparent-muddy-white: hsla(43, 6%, 79%, 0.85);
-$very-thin-border: calc(((0.05vw + 0.05vh) / 2) + 0.05em);
-$thin-border: calc(((0.1vw + 0.1vh) / 2) + 0.1em);
-// TODO: change var() to $ variables
+@import "global-variables";
+
 h1 {
     font-weight: 300;
     font-size: min(calc(((8.75vh + 8.75vw) / 2) + 12px), 100px);
-    color: var(--absolute-black);
+    color: $absolute-black;
 }
 h2 {
     font-weight: 300;
     font-size: min(calc(((6vh + 6vw) / 2) + 10px), 75px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
 h3 {
     font-weight: 300;
     font-size: min(calc(((3vh + 3vw) / 2) + 8px), 60px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
 h4 {
     font-weight: 300;
     font-size: min(calc(((2.5vh + 2.5vw) / 2) + 6px), 40px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
 h5 {
     font-weight: 300;
     font-size: min(calc(((2vh + 2vw) / 2) + 4px), 30px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
 h6 {
     font-weight: 300;
     font-size: min(calc(((1.5vh + 1.5vw) / 2) + 3px), 20px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
 p {
     font-weight: 300;
     font-size: min(calc(((1.5vh + 1.5vw) / 2) + 3px), 20px);
-    color: var(--absolute-black);
+    color: $absolute-black;
     margin: 0;
     padding: 0;
 }
@@ -65,7 +52,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    /*background-color: var(--less-muddy-white);*/
+    /*background-color: $less-muddy-white;*/
     background-image: url("../images/abstract_background.svg");
     background-size: 100vw;
     background-position: center;
@@ -84,19 +71,19 @@ main {
     align-items: center;
 }
 header {
-    /*background-color: var(--soft-silver-gray);*/
+    /*background-color: $soft-silver-grey;*/
     height: calc(((5vh + 5vw) / 2) + 0.5em);
     width: 100%;
     top: 0;
     left: 0;
     padding: 0;
     margin: 0;
-    border-bottom: calc((0.15vh + 0.15vw) / 2) solid var(--absolute-black);
+    border-bottom: calc((0.15vh + 0.15vw) / 2) solid $absolute-black;
 }
 nav {
-    background-color: var(--charcoal-dust);
+    background-color: $charcoal-dust;
 
-    /*background-color: var(--oceans-depths-teal);*/
+    /*background-color: $ocean-depths-teal;*/
     height: calc(((5vh + 5vw) / 2) + 0.5em);
     width: 100%;
     top: 0;
@@ -119,7 +106,7 @@ nav {
     font-size: calc(((2.25vh + 2.25vw) / 2) + 0.25em);
 }
 .nav-bar-item h4 {
-    color: var(--pristine-white);
+    color: $pristine-white;
 }
 #hamburger-menu-icon {
     width: calc(((3vh + 3vw) / 2) + 0.5em);
@@ -135,13 +122,13 @@ nav {
     display: none;
 }
 .small-button {
-    background-color: var(--charcoal-dust);
-    box-shadow: var(--peach-cream-orange) calc(((0.15vh + 0.15vw) / 2) + 0.15em) calc(((0.15vh + 0.15vw) / 2) + 0.15em) 0 0;
+    background-color: $charcoal-dust;
+    box-shadow: $peach-cream-orange calc(((0.15vh + 0.15vw) / 2) + 0.15em) calc(((0.15vh + 0.15vw) / 2) + 0.15em) 0 0;
     transition: margin-bottom, margin-left, box-shadow, ease-in-out 0.15s;
     border-radius: calc((2.35vh + 2.35vw) / 2);
     padding: calc(((0.5vh + 0.5vw) / 2) + 0.25em) calc(((1vh + 1vw) / 2) + 0.5em);
     /*margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em);*/
-    border: var(--thin-border) solid var(--peach-cream-orange);
+    border: $thin-border solid $peach-cream-orange;
     width: calc(((10vh + 10vw) / 2) + 3em);
     height: calc(((2vh + 2vw) / 2) + 1em);
     display: flex;
@@ -150,7 +137,7 @@ nav {
     text-align: center;
 }
 .small-button:hover {
-    box-shadow: var(--peach-cream-orange) calc(((0.2vh + 0.2vw) / 2) + 0.2em) calc(((0.2vh + 0.2vw) / 2) + 0.2em) 0 0;
+    box-shadow: $peach-cream-orange calc(((0.2vh + 0.2vw) / 2) + 0.2em) calc(((0.2vh + 0.2vw) / 2) + 0.2em) 0 0;
 }
 .small-button:active {
     margin-bottom: calc((((0.2vh + 0.2vw) / 2) + 0.2em) * -1);
@@ -158,10 +145,10 @@ nav {
     box-shadow: none;
 }
 .small-button-text {
-    color: var(--pristine-white);
+    color: $pristine-white;
 }
 footer {
-    background-color: var(--charcoal-dust);
+    background-color: $charcoal-dust;
     height: 5vh;
     width: 100%;
     padding: 0;
@@ -181,5 +168,5 @@ footer {
 #footer-small-text-section h5 {
     margin: 0;
     padding: 0;
-    color: var(--pristine-white);
+    color: $pristine-white;
 }
