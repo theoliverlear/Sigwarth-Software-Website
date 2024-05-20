@@ -5,7 +5,7 @@ for (let image of Array.from(images)) {
 }
 
 const hamburgerListItems: HTMLCollectionOf<Element> = document.getElementsByClassName('hamburger-list-items');
-const hamburgerButton: HTMLElement | null = document.getElementById('hamburger-menu-icon');
+const hamburgerButton: HTMLElement = document.getElementById('hamburger-menu-icon');
 
 function toggleListItemsView(): void {
     Array.from(hamburgerListItems).forEach((element: Element) => {
