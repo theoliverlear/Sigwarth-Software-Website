@@ -1,0 +1,46 @@
+/*-----------------------------Previous-Colors------------------------------*/
+$pristine-white: hsl(0, 0%, 100%);
+$soft-silver-gray: hsl(0, 0%, 75%);
+$peach-cream-orange: hsl(30, 44%, 70%);
+$aquamarine: hsl(196, 100%, 50%);
+$oceans-depths-teal: hsl(194, 94%, 26%);
+$transparent-oceans-depths-teal: hsla(194, 94%, 26%, 0.7);
+$charcoal-dust: hsl(0, 3%, 14%);
+$transparent-charcoal-dust: hsla(0, 3%, 14%, 0.9);
+$absolute-black: hsl(0, 0%, 0%);
+$less-muddy-white: hsl(43, 6%, 90%);
+$muddy-white: hsl(43, 6%, 79%);
+$transparent-muddy-white: hsla(43, 6%, 79%, 0.85);
+/*----------------------------------Colors----------------------------------*/
+$white: hsl(0, 0%, 100%);
+$smokey-white: hsl(0, 0%, 95%);
+$grey: hsl(0, 0%, 83%);
+$cream: hsl(60, 56%, 91%);
+$soft-teal: hsl(210, 13%, 50%);
+$soft-blue: hsl(207, 44%, 49%);
+$pure-blue: hsl(211, 100%, 35%);
+$midnight-blue: hsl(216, 26%, 24%);
+$charcoal-black: hsl(0, 0%, 20%);
+$black: hsl(0, 0%, 2%);
+/*---------------------------------Borders----------------------------------*/
+$very-thin-border: calc(((0.05vw + 0.05vh) / 2) + 0.05em);
+$thin-border: calc(((0.1vw + 0.1vh) / 2) + 0.1em);
+/*----------------------------------Sizes-----------------------------------*/
+$none: 0;
+$eighth-percent: calc(((0.125vw + 0.125vh) / 2) + 0.0625em);
+$quarter-percent: calc(((0.25vw + 0.25vh) / 2) + 0.125em);
+$half-percent: calc(((0.5vw + 0.5vh) / 2) + 0.25em);
+$one-percent: calc(((1vw + 1vh) / 2) + 0.5em);
+$two-percent: calc(((2vw + 2vh) / 2) + 1em);
+$three-percent: calc(((3vw + 3vh) / 2) + 1.5em);
+$four-percent: calc(((4vw + 4vh) / 2) + 2em);
+$five-percent: calc(((5vw + 5vh) / 2) + 2.5em);
+$six-percent: calc(((6vw + 6vh) / 2) + 3em);
+$ten-percent: calc(((10vw + 10vh) / 2) + 5em);
+$twelve-percent: calc(((12vw + 12vh) / 2) + 6em);
+$fourteen-percent: calc(((14vw + 14vh) / 2) + 7em);
+$fifteen-percent: calc(((15vw + 15vh) / 2) + 7.5em);
+$twenty-percent: calc(((20vw + 20vh) / 2) + 10em);
+$thirty-percent: calc(((30vw + 30vh) / 2) + 15em);
+$fifty-percent: calc(((50vw + 50vh) / 2) + 25em);
+$seventy-five-percent: calc(((75vw + 75vh) / 2) + 37.5em);
