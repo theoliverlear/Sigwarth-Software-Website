@@ -3,18 +3,23 @@ const images: HTMLCollectionOf<HTMLImageElement> = document.getElementsByTagName
 for (let image of Array.from(images)) {
     image.draggable = false;
 }
-
-const hamburgerListItems: HTMLCollectionOf<Element> = document.getElementsByClassName('hamburger-list-items');
-const hamburgerButton: HTMLElement = document.getElementById('hamburger-menu-icon');
-
-function toggleListItemsView(): void {
-    Array.from(hamburgerListItems).forEach((element: Element) => {
-        if ((<HTMLElement>element).style.display === 'none') {
-            (<HTMLElement>element).style.display = 'block';
+let hamburgerListItems: JQuery<HTMLElement> = $('.hamburger-list-items');
+let body: JQuery<HTMLElement> = $('body');
+function toggleNavBarItems(): void {
+    if (window.innerWidth > 920) {
+        hamburgerListItems.fadeToggle();
+    } else {
+        if (body.hasClass('full-screen-nav')) {
+            body.fadeOut(200, function () {
+                $(this).removeClass('full-screen-nav').fadeIn(400);
+            });
         } else {
-            (<HTMLElement>element).style.display = 'none';
+            body.fadeOut(200, function () {
+                $(this).addClass('full-screen-nav').fadeIn(400);
+            });
         }
-    });
+    }
 }
 
-hamburgerButton.addEventListener('click', toggleListItemsView);
+let hamburgerIcon: JQuery<HTMLElement> = $('#hamburger-menu-icon');
+hamburgerIcon.on('click', toggleNavBarItems);
