@@ -14,173 +14,65 @@
 </head>
 <body>
 <!--------------------------------Heading------------------------------------>
-<header>
-    <section>
-        <!------------------------Nav-Bar------------------------------------>
-        <nav>
-            <div id="nav-container">
+<header id="nav-bar">
+    <!------------------------Nav-Bar------------------------------------>
+    <nav>
+        <div id="nav-container">
+            <div>
+                <img id="hamburger-menu-icon"
+                     th:src="@{/images/hamburger_menu.svg}"
+                     src="../static/images/hamburger_menu.svg"
+                     alt="hamburger menu icon">
+            </div>
+            <div class="hamburger-list-items nav-bar-item">
                 <div>
-                    <img id="hamburger-menu-icon"
-                         th:src="@{/images/hamburger_menu.svg}"
-                         src="../static/images/hamburger_menu.svg"
-                         alt="hamburger menu icon">
-                </div>
-                <div class="hamburger-list-items nav-bar-item">
                     <h4 class="nav-bar-item-text">Home</h4>
                 </div>
-                <div class="hamburger-list-items nav-bar-item">
-                    <h4 class="nav-bar-item-text">Tools</h4>
-                </div>
-                <div class="hamburger-list-items nav-bar-item">
-                    <h4 class="nav-bar-item-text">Projects</h4>
-                </div>
-                <div class="hamburger-list-items nav-bar-item">
-                    <h4 class="nav-bar-item-text">About</h4>
-                </div>
-                <div class="hamburger-list-items nav-bar-item">
-                    <h4 class="nav-bar-item-text">Contact</h4>
-                </div>
             </div>
-        </nav>
-    </section>
+            <div class="hamburger-list-items nav-bar-item">
+                <h4 class="nav-bar-item-text">Services</h4>
+            </div>
+            <div class="hamburger-list-items nav-bar-item">
+                <h4 class="nav-bar-item-text">Projects</h4>
+            </div>
+            <div class="hamburger-list-items nav-bar-item">
+                <h4 class="nav-bar-item-text">About</h4>
+            </div>
+            <div class="hamburger-list-items nav-bar-item">
+                <h4 class="nav-bar-item-text">Contact</h4>
+            </div>
+        </div>
+    </nav>
 </header>
 <main>
-    <!---------------------------Intro-Section------------------------------->
-    <section id="intro-section">
-        <div id="oliver-lear-portrait-div">
-            <img id="oliver-lear-portrait-img"
-                 alt="oliver lear portrait"
-                 th:src="@{/images/oliver_sigwarth_portrait.png}"
-                 src="../static/images/oliver_sigwarth_portrait.png">
-        </div>
-        <div id="intro-section-text">
-            <div id="intro-name-div">
-                <h2 id="intro-name-text">Oliver Lear Sigwarth</h2>
-            </div>
-            <div id="logo-handle-div">
-                <div id="oliver-lear-logo-div">
-                    <img id="oliver-lear-logo-img"
-                         class="title-image"
-                         th:src="@{/images/oliver_lear_logo.png}"
-                         src="../static/images/oliver_lear_logo.png"
-                         alt="oliver lear logo">
-                </div>
-                <div id="intro-social-handle-div"> <!-- insert dropdown with socials class here -->
-                    <h4 id="intro-social-handle-text">@theoliverlear</h4>
-                </div>
-            </div>
-        </div>
-        <h3 id="intro-profession-text">Software Engineer</h3>
+    <section>
         <div>
-            <p>
-                I am a passionate proficient programmer with a focus on full
-                stack web development. I have experience with Java, Python,
-                JavaScript, HTML, CSS, SQL, unit testing, and the command
-                line. I particularly have experience with Java Spring Boot,
-                where I have built a variety of apps that you can find on this
-                site. If you have any questions or would like to work with me,
-                please feel free to...
-            </p>
+            <h1>Sigwarth Software</h1>
+            <h2>Sigwarth Software</h2>
+            <h3>Sigwarth Software</h3>
+            <h4>Sigwarth Software</h4>
+            <h5>Sigwarth Software</h5>
+            <h6>Sigwarth Software</h6>
+            <p>Sigwarth Software</p>
+            <code>Sigwarth Software</code>
+            <aside>Sigwarth Software</aside>
+            <blockquote>Sigwarth Software</blockquote>
+            <article>Sigwarth Software</article>
         </div>
-        <div id="contact-button-div" class="small-button">
-            <h5 id="contact-button-text" class="small-button-text">Contact Me</h5>
-        </div>
-        </div>
-
-    </section>
-    <!---------------------------Site-Title-Section-------------------------->
-    <section id="name-title-section">
-        <!--------------------------Java-Logo-------------------------------->
-        <img id="java-title-logo"
-             class="title-image"
-             th:src="@{/images/java_logo_3.png}"
-             src="../static/images/java_logo_3.png"
-             alt="java logo">
-        <!--------------------------Terminal-Logo---------------------------->
-        <img id="terminal-title-logo"
-             class="title-image"
-             src="../static/images/terminal_logo.png"
-             th:src="@{/images/terminal_logo.png}"
-             alt="terminal logo">
-        <img id="python-title-logo"
-             class="title-image"
-             src="../static/images/python_logo.png"
-             th:src="@{/images/python_logo.png}"
-             alt="python logo">
-    </section>
-    <!--------------------------Project-Promo-Section------------------------>
-    <section id="promo-section">
-        <!------------------------Build-Programs----------------------------->
-        <section class="promo-container" id="programs-people-need-section">
-            <h2 class="promo-title">Build Programs People Need</h2>
-            <div id="programs-people-need-item-container"
-                 class="specific-promo-container">
-                <div class="promo-item">
-                    <h3>Crypto Trader</h3>
-                    <img class="promo-img"
-                         src="../static/images/crypto_logo.svg"
-                         th:src="@{/images/crypto_logo.svg}"
-                         alt="crypto trader">
-                </div>
-                <div class="promo-item">
-                    <h3>Oliver's Additions</h3>
-                    <img class="promo-img"
-                         src="../static/images/minecraft_block.webp"
-                         th:src="@{/images/minecraft_block.webp}"
-                         alt="minecraft block">
-                </div>
-                <div class="promo-item">
-                    <h3>Dota Data Hub</h3>
-                    <img class="promo-img"
-                         src="../static/images/dota_data_logo.png"
-                         th:src="@{/images/dota_data_logo.png}"
-                         alt="dota data hub">
-                </div>
-            </div>
-        </section>
-        <!------------------------Design-Web-Apps---------------------------->
-        <section id="design-web-apps-section" class="promo-container">
-            <h2 class="promo-title">Design web apps</h2>
-            <div id="design-web-apps-container" class="specific-promo-container">
-                <div class="promo-item">
-                    <h3>Random API</h3>
-                    <img class="promo-img" src="../static/images/random_api_logo.png"
-                         th:src="@{/images/random_api_logo.png}"
-                         alt="random api">
-                </div>
-                <div class="promo-item">
-                    <h3>Oliver Lear Software</h3>
-                    <img class="promo-img" src="../static/images/oliver_lear_logo.png"
-                         th:src="@{/images/oliver_lear_logo.png}"
-                         alt="oliver lear software" id="oliver-lear-logo-promo-img">
-                </div>
-            </div>
-        </section>
-        <!------------------------Stylize-My-Work---------------------------->
-        <section class="promo-container">
-            <h2 class="promo-title">Stylize my work</h2>
-            <div id="stylize-work-container"
-                 class="specific-promo-container">
-                <div class="promo-item">
-                    <h3>Style Guide</h3>
-                    <img class="promo-img"
-                         src="../static/images/style_guide_logo.png"
-                         th:src="@{/images/style_guide_logo.png}"
-                         alt="style guide">
-                </div>
-            </div>
-        </section>
     </section>
 </main>
 <footer>
     <section id="footer-small-text-section">
-        <h5>&copy 2024 Sigwarth Software</h5>
+        <div id="footer-left-text-item">
+            <h6>&copy 2024 Sigwarth Software</h6>
+        </div>
+        <div id="footer-right-text-item">
+            <h6>Terms of Service</h6>
+        </div>
     </section>
 </footer>
-<script src="../static/script/bundle.js" type="module"
+<script src="../static/script/bundle.js"
         th:src="@{/script/bundle.js}"></script>
-<script src="../static/script/globalScript.js" type="module"
-        th:src="@{/script/globalScript.js}"></script>
 <noscript>
     <h1>JavaScript is disabled on your browser</h1>
     <h2>Enable JavaScript to view this page</h2>
