@@ -10,11 +10,11 @@ function toggleNavBarItems(): void {
         hamburgerListItems.fadeToggle();
     } else {
         if (body.hasClass('full-screen-nav')) {
-            body.fadeOut(200, function () {
+            body.fadeOut(200, function() {
                 $(this).removeClass('full-screen-nav').fadeIn(400);
             });
         } else {
-            body.fadeOut(200, function () {
+            body.fadeOut(200, function() {
                 $(this).addClass('full-screen-nav').fadeIn(400);
             });
         }
