@@ -107,17 +107,33 @@ nav {
 }
 
 #hamburger-menu-icon {
-    width: calc(((3vh + 3vw) / 2) + 0.5em);
+    width: $three-percent;
     height: auto;
     transition: width ease-in-out 0.15s;
-}
-#hamburger-menu-icon:hover {
-    cursor: pointer;
-    width: calc(((3.5vh + 3.5vw) / 2) + 0.5em);
-    height: auto;
+    &:hover {
+        cursor: pointer;
+        width: $three-half-percent;
+        height: auto;
+    }
 }
 .hamburger-list-items {
     display: none;
+    align-items: center;
+    justify-content: center;
+}
+#nav-services-dropdown {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#services-arrow-icon {
+    margin-top: $half-percent;
+    margin-left: $half-percent;
+    width: $two-half-percent;
+    height: $two-half-percent;
+    img {
+        @include size(100%, 100%);
+    }
 }
 @media screen and (max-width: 920px) {
     .full-screen-nav {
@@ -131,13 +147,16 @@ nav {
             @include flex(center, center, column);
             @include size(100%, 100%);
         }
-
+        #nav-services-dropdown {
+            margin-left: $three-percent;
+            //@include size(100%, 100%);
+        }
         #nav-container {
             @include flex(space-around, center, column);
             @include size(100%, 100%);
         }
         .hamburger-list-items {
-            @include flex(center, center, column);
+            @include flex(center, center, row);
             width: 100%;
             h4 {
                 font-size: $h3-font-size;
@@ -145,21 +164,19 @@ nav {
             }
             &:hover {
                 h4 {
-                    font-size: $h2-font-size;
+                    font-size: $h2-half-font-size;
                 }
             }
         }
         #hamburger-menu-icon {
-            width: $three-percent;
+            width: $four-percent;
             &:hover {
-                width: $four-percent;
+                width: $five-percent;
             }
         }
-        //.nav-active {
-        //    display: block; // the nav items will be displayed in a block if they have the class nav-active
-        //}
     }
 }
+
 footer {
     background-color: $charcoal-dust;
     //height: 5vh;
