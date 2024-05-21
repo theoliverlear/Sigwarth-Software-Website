@@ -1,90 +1,83 @@
-@import "global-variables";
+/*================================-Imports-=================================*/
 
+/*---------------------------Custom-Style-Sheets----------------------------*/
+@import "global-variables";
+@import "global-mixins";
+/*--------------------------------Bootstrap---------------------------------*/
+
+/*==============================-Text-Content-==============================*/
+
+/*---------------------------------Heading----------------------------------*/
 h1 {
     font-weight: 300;
-    font-size: min(calc(((8.75vh + 8.75vw) / 2) + 12px), 100px);
+    font-size: $h1-font-size;
     color: $absolute-black;
+    @include basic-margin-padding(0, 0);
 }
 h2 {
     font-weight: 300;
-    font-size: min(calc(((6vh + 6vw) / 2) + 10px), 75px);
+    font-size: $h2-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h3 {
     font-weight: 300;
-    font-size: min(calc(((3vh + 3vw) / 2) + 8px), 60px);
+    font-size: $h3-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h4 {
     font-weight: 300;
-    font-size: min(calc(((2.5vh + 2.5vw) / 2) + 6px), 40px);
+    font-size: $h4-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h5 {
     font-weight: 300;
-    font-size: min(calc(((2vh + 2vw) / 2) + 4px), 30px);
+    font-size: $h5-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h6 {
     font-weight: 300;
-    font-size: min(calc(((1.5vh + 1.5vw) / 2) + 3px), 20px);
+    font-size: $h6-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
+/*--------------------------------Area-Text---------------------------------*/
 p {
     font-weight: 300;
-    font-size: min(calc(((1.5vh + 1.5vw) / 2) + 3px), 20px);
+    font-size: $h6-font-size;
     color: $absolute-black;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
+}
+/*==========================-Universal-Containers-==========================*/
+html {
+    scroll-behavior: smooth;
 }
 body {
-    /*font-family: 'Helvetica Neue', sans-serif;*/
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    /*background-color: $less-muddy-white;*/
-    background-image: url("../images/abstract_background.svg");
-    background-size: 100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: $jetbrains-mono-font;
+    background-color: $less-smokey-white;
+    min-height: 100vh;
+    @include basic-margin-padding(0, 0);
+    @include flex(center, center, column);
 }
 main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, row);
 }
 header {
-    /*background-color: $soft-silver-grey;*/
-    height: calc(((5vh + 5vw) / 2) + 0.5em);
+    height: calc(((6vh + 4vw) / 2) + 1em);
     width: 100%;
     top: 0;
     left: 0;
     padding: 0;
     margin: 0;
-    border-bottom: calc((0.15vh + 0.15vw) / 2) solid $absolute-black;
 }
+/*================================-Nav-Bar-=================================*/
 nav {
     background-color: $charcoal-dust;
-
-    /*background-color: $ocean-depths-teal;*/
-    height: calc(((5vh + 5vw) / 2) + 0.5em);
+    height: calc(((6vh + 4vw) / 2) + 1em);
     width: 100%;
     top: 0;
     left: 0;
@@ -101,13 +94,18 @@ nav {
 }
 .nav-bar-item {
     transition: font-size ease-in-out 0.15s;
+    h4 {
+        color: $pristine-white;
+        text-align: center;
+    }
 }
-.nav-bar-item:hover, .nav-bar-item-text {
-    font-size: calc(((2.25vh + 2.25vw) / 2) + 0.25em);
+
+.nav-bar-item {
+    &:hover, .nav-bar-item-text {
+        font-size: calc(((2.25vh + 2.25vw) / 2) + 0.25em);
+    }
 }
-.nav-bar-item h4 {
-    color: $pristine-white;
-}
+
 #hamburger-menu-icon {
     width: calc(((3vh + 3vw) / 2) + 0.5em);
     height: auto;
@@ -121,52 +119,74 @@ nav {
 .hamburger-list-items {
     display: none;
 }
-.small-button {
-    background-color: $charcoal-dust;
-    box-shadow: $peach-cream-orange calc(((0.15vh + 0.15vw) / 2) + 0.15em) calc(((0.15vh + 0.15vw) / 2) + 0.15em) 0 0;
-    transition: margin-bottom, margin-left, box-shadow, ease-in-out 0.15s;
-    border-radius: calc((2.35vh + 2.35vw) / 2);
-    padding: calc(((0.5vh + 0.5vw) / 2) + 0.25em) calc(((1vh + 1vw) / 2) + 0.5em);
-    /*margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em);*/
-    border: $thin-border solid $peach-cream-orange;
-    width: calc(((10vh + 10vw) / 2) + 3em);
-    height: calc(((2vh + 2vw) / 2) + 1em);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.small-button:hover {
-    box-shadow: $peach-cream-orange calc(((0.2vh + 0.2vw) / 2) + 0.2em) calc(((0.2vh + 0.2vw) / 2) + 0.2em) 0 0;
-}
-.small-button:active {
-    margin-bottom: calc((((0.2vh + 0.2vw) / 2) + 0.2em) * -1);
-    margin-left: calc(((0.2vw + 0.2vh) / 2) + 0.2em);
-    box-shadow: none;
-}
-.small-button-text {
-    color: $pristine-white;
+@media screen and (max-width: 920px) {
+    .full-screen-nav {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            @include flex(center, center, column);
+            @include size(100%, 100%);
+        }
+
+        #nav-container {
+            @include flex(space-around, center, column);
+            @include size(100%, 100%);
+        }
+        .hamburger-list-items {
+            @include flex(center, center, column);
+            width: 100%;
+            h4 {
+                font-size: $h3-font-size;
+                transition: font-size ease-in-out 0.15s;
+            }
+            &:hover {
+                h4 {
+                    font-size: $h2-font-size;
+                }
+            }
+        }
+        #hamburger-menu-icon {
+            width: $three-percent;
+            &:hover {
+                width: $four-percent;
+            }
+        }
+        //.nav-active {
+        //    display: block; // the nav items will be displayed in a block if they have the class nav-active
+        //}
+    }
 }
 footer {
     background-color: $charcoal-dust;
-    height: 5vh;
+    //height: 5vh;
     width: 100%;
     padding: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh 0 0 0;
+    @include flex(center, center, row);
+    margin-top: auto;
+    margin-bottom: 0;
 }
 #footer-small-text-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-#footer-small-text-section h5 {
-    margin: 0;
-    padding: 0;
-    color: $pristine-white;
+    @include size(100%, 100%);
+    padding: $half-percent $none;
+    @include flex(center, center, row);
+
+    h6 {
+        @include basic-margin-padding(0, 0);
+        color: $pristine-white;
+    }
+    div {
+        @include flex(center, center, row);
+        @include size(100%, 100%);
+        flex: 1;
+        padding: $none $one-percent;
+    }
+    #footer-left-text-item {
+        border-right: $thin-border solid $pristine-white;
+    }
 }
