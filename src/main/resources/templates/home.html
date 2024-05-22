@@ -30,14 +30,39 @@
                 </div>
             </div>
             <div class="hamburger-list-items nav-bar-item" id="nav-services-dropdown">
-                <div>
-                    <h4 class="nav-bar-item-text">Services</h4>
-                </div>
-                <div>
-                    <img id="services-arrow-icon"
-                         src="../static/images/icon/arrow/forward_arrow.svg"
-                         alt="services arrow icon"
-                         th:src="@{/images/icon/arrow/forward_arrow.svg}">
+                <div id="services-dropdown-container">
+                    <div id="services-title-with-dropdown">
+                        <div id="services-with-caret">
+                            <div>
+                                <h4 class="nav-bar-item-text">Services</h4>
+                            </div>
+                            <div>
+                                <img id="services-arrow-icon"
+                                     src="../static/images/icon/arrow/forward_arrow.svg"
+                                     alt="services arrow icon"
+                                     th:src="@{/images/icon/arrow/forward_arrow.svg}">
+                            </div>
+                        </div>
+                        <div>
+                            <div id="services-dropdown">
+                                <div>
+                                    <h5 class="services-dropdown-text">Crypto Trader</h5>
+                                </div>
+                                <div>
+                                    <h5 class="services-dropdown-text">Sigwarth Home Tools</h5>
+                                </div>
+                                <div>
+                                    <h5 class="services-dropdown-text">AI Baby Name Generator</h5>
+                                </div>
+                                <div>
+                                    <h5 class="services-dropdown-text">Dota Data Hub</h5>
+                                </div>
+                                <div>
+                                    <h5 class="services-dropdown-text">See All Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hamburger-list-items nav-bar-item">
