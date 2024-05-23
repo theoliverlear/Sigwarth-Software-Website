@@ -1,1 +1,164 @@
 @import "global-variables";
+@import "global-mixins";
+#introduction-section {
+    margin: $two-percent $zero $zero $zero;
+    width: 100%;
+    @include flex(center, center, column);
+    #sigwarth-software-opening {
+        margin: $zero $zero $two-percent $zero;
+        width: min(85%, 1200px);
+        #sigwarth-software-title-text {
+            width: 100%;
+            @include flex(center, center, column);
+            padding: $one-percent $one-half-percent;
+            background-color: $charcoal-dust;
+            border-radius: $one-percent;
+            margin-bottom: $one-percent;
+            h2 {
+                color: $white;
+            }
+        }
+        #sigwarth-software-logo-with-list {
+            width: 100%;
+            @include flex(space-around, center, row);
+            #sigwarth-software-logo {
+                flex: 1;
+                @include size($fifteen-percent, $fifteen-percent);
+                @include flex(center, center, column);
+                img {
+                    @include size(100%, 100%);
+                }
+            }
+            #occupation-list {
+                flex: 1;
+                * > h4 {
+                    font-family: $source-code-font;
+
+                    &:after {
+                        content: "_";
+                    }
+                }
+            }
+        }
+    }
+    #oliver-opening {
+        width: 100%;
+        @include flex(center, center, column);
+        #oliver-name-div {
+            margin: $one-percent $zero;
+        }
+        #oliver-portrait-with-paragraph {
+            width: 100%;
+            @include flex(space-around, center, row);
+            #oliver-paragraph-div {
+                width: $thirty-percent;
+                @include flex(center, center, column);
+                p {
+                    text-align: left;
+                }
+            }
+            #oliver-portrait-div {
+                @include size($fifteen-percent, $fifteen-percent);
+                border-radius: $half-percent;
+                @include flex(center, center, column);
+                img {
+                    border-radius: inherit;
+                    @include size(100%, 100%);
+                }
+            }
+        }
+    }
+}
+#experience-section {
+    @import "bootstrap/scss/bootstrap";
+    width: 100%;
+    margin-bottom: $two-percent;
+    @include flex(center, center, column);
+    #experience-title-div {
+        margin: $one-half-percent $zero $zero $zero;
+        padding: 0;
+        h3 {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .mobile-view {
+        #introduction-section {
+            #sigwarth-software-opening {
+                #sigwarth-software-title-text {
+                    padding: $one-percent;
+                    h2 {
+                        font-size: calc($h2-font-size * 0.9);
+                    }
+                }
+                #sigwarth-software-logo-with-list {
+                    #sigwarth-software-logo {
+                        @include size($ten-percent, $ten-percent);
+                    }
+                    #occupation-list {
+                        * > h4 {
+                            font-size: $h4-font-size;
+                        }
+                    }
+                }
+            }
+            #oliver-opening {
+                #oliver-portrait-with-paragraph {
+                    #oliver-paragraph-div {
+                        width: 100%;
+                    }
+                    #oliver-portrait-div {
+                        @include size($twelve-percent, $twelve-percent);
+                    }
+                    #oliver-paragraph-div {
+                        width: 50%;
+                        p {
+                            font-size: $h6-font-size / 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .mobile-view {
+        #introduction-section {
+            #sigwarth-software-opening {
+                #sigwarth-software-title-text {
+                    padding: $half-percent;
+                    h2 {
+                        font-size: calc($h3-font-size);
+                    }
+                }
+                #sigwarth-software-logo-with-list {
+                    #sigwarth-software-logo {
+                        @include size($ten-percent, $ten-percent);
+                    }
+                    #occupation-list {
+                        * > h4 {
+                            font-size: $h5-font-size;
+                        }
+                    }
+                }
+            }
+            #oliver-opening {
+                #oliver-portrait-with-paragraph {
+                    #oliver-paragraph-div {
+                        width: 100%;
+                    }
+                    #oliver-portrait-div {
+                        @include size($twelve-percent, $twelve-percent);
+                    }
+                    #oliver-paragraph-div {
+                        width: 50%;
+                        p {
+                            font-size: calc($h6-font-size * .75);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
