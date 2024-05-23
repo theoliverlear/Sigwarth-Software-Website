@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["dom"],
     "outDir": "./src/main/resources/static/script",
     "noImplicitAny": true,
     "module": "es6",
@@ -8,5 +9,5 @@
     "esModuleInterop": true,
   },
   "include": ["./src/**/*"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "./src/main/resources/static/script/bundle.js"],
 }

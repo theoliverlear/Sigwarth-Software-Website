@@ -8,3 +8,7 @@
     width: $width;
     height: $height;
 }
+@mixin basic-margin-padding($margin: 0, $padding: 0) {
+    margin: $margin;
+    padding: $padding;
+}

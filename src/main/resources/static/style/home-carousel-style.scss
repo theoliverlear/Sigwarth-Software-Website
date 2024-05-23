@@ -1,0 +1,22 @@
+@import "global-variables";
+@import "global-mixins";
+#experience-carousel {
+    width: 100%;
+    padding: $one-percent $zero;
+    background-color: $charcoal-dust;
+    .carousel-inner {
+        h5 {
+            color: $pristine-white;
+        }
+    }
+    .technology-logo-div {
+        .technology-item-container {
+            @include flex(center, center, column);
+            img {
+                @include size($ten-percent, $ten-percent);
+                border-radius: $two-percent;
+            }
+        }
+
+    }
+}
