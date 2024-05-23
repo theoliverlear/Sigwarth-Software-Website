@@ -44,12 +44,12 @@ function setServicesArrowDownIcon(): void {
     servicesArrowIcon.attr('src', downArrowSrc);
 }
 function fadeServicesArrowUpIcon(): void {
-    servicesArrowIcon.fadeOut('fast', function (): void {
+    servicesArrowIcon.fadeOut('fast', function(): void {
         $(this).attr('src', upArrowSrc).fadeIn('slow');
     });
 }
 function fadeServicesArrowDownIcon(): void {
-    servicesArrowIcon.fadeOut('fast', function (): void {
+    servicesArrowIcon.fadeOut('fast', function(): void {
         $(this).attr('src', downArrowSrc).fadeIn('slow');
     });
 }
@@ -91,10 +91,14 @@ function displayServices(): void {
     } else {
         fadeOutServicesArrow();
         hamburgerToBackArrow();
-        navBarItemTexts.fadeOut('slow', function (): void {
+        navBarItemTexts.fadeOut('slow', function(): void {
             navBarItemTexts.each(function (index: number): void {
                 if (index < servicesTexts.length) {
+                    if (servicesTexts[index] === 'See All Services') {
+                        $(this).css('text-decoration', 'underline');
+                    }
                     $(this).text(servicesTexts[index]).fadeIn('slow');
+
                 }
             }).promise().done(function (): void {
                 navServicesDropdown.css('margin-left', '0');
@@ -113,8 +117,11 @@ function hideServices(): void {
         servicesDropdown.fadeOut('fast');
     } else {
         backArrowToHamburger();
-        navBarItemTexts.fadeOut('slow', function (): void {
+        navBarItemTexts.fadeOut('slow', function(): void {
             navBarItemTexts.each(function (index: number): void {
+                if (servicesTexts[index] === 'Contact') {
+                    $(this).css('text-decoration', 'none');
+                }
                 if (index < navBarTexts.length) {
                     $(this).text(navBarTexts[index]).fadeIn('slow');
                 }
