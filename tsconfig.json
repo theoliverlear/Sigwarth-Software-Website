@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["dom"],
     "outDir": "./src/main/resources/static/script",
     "noImplicitAny": true,
     "module": "es6",
