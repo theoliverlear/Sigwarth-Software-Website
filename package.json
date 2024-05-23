@@ -37,6 +37,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "jquery": "^3.7.1",
+    "jquery-touchswipe": "^1.6.19",
     "jquery-ui": "^1.13.3",
     "typescript": "^5.4.5"
   }
