@@ -9,6 +9,8 @@
           th:href="@{/style/global-style.css}">
     <link rel="stylesheet" href="../static/style/home-style.css"
           th:href="@{/style/home-style.css}">
+    <link rel="stylesheet" href="../static/style/home-carousel-style.css"
+          th:href="@{/style/home-carousel-style.css}">
     <link rel="icon" href="../static/favicon/sigwarth_software_logo_cropped_transparent.ico"
           th:href="@{/favicon/sigwarth_software_logo_cropped_transparent.ico}">
 </head>
@@ -45,20 +47,20 @@
                         </div>
                         <div>
                             <div id="services-dropdown">
-                                <div>
+                                <div class="services-dropdown-div">
                                     <h5 class="services-dropdown-text">Crypto Trader</h5>
                                 </div>
-                                <div>
+                                <div class="services-dropdown-div">
                                     <h5 class="services-dropdown-text">Sigwarth Home Tools</h5>
                                 </div>
-                                <div>
+                                <div class="services-dropdown-div">
                                     <h5 class="services-dropdown-text">AI Baby Name Generator</h5>
                                 </div>
-                                <div>
+                                <div class="services-dropdown-div">
                                     <h5 class="services-dropdown-text">Dota Data Hub</h5>
                                 </div>
-                                <div>
-                                    <h5 class="services-dropdown-text">See All Services</h5>
+                                <div class="services-dropdown-div">
+                                    <h5 id="see-all-services-text" class="services-dropdown-text">See All Services</h5>
                                 </div>
                             </div>
                         </div>
@@ -84,22 +86,261 @@
     </nav>
 </header>
 <main>
-    <section>
-        <div>
-            <h1>Sigwarth Software</h1>
-            <h2>Sigwarth Software</h2>
-            <h3>Sigwarth Software</h3>
-            <h4>Sigwarth Software</h4>
-            <h5>Sigwarth Software</h5>
-            <h6>Sigwarth Software</h6>
-            <p>Sigwarth Software</p>
-            <code>Sigwarth Software</code>
-            <aside>Sigwarth Software</aside>
-            <blockquote>Sigwarth Software</blockquote>
-            <article>Sigwarth Software</article>
+    <section id="introduction-section">
+        <div id="sigwarth-software-opening">
+            <div id="sigwarth-software-title-text">
+                <h2>Sigwarth Software</h2>
+            </div>
+            <div id="sigwarth-software-logo-with-list">
+                <div id="occupation-list">
+                    <div>
+                        <h4 id="software-development-typed"></h4>
+                    </div>
+                    <div>
+                        <h4 id="web-development-typed"></h4>
+                    </div>
+                    <div>
+                        <h4 id="leadership-typed"></h4>
+                    </div>
+                </div>
+                <div id="sigwarth-software-logo-div">
+                    <img id="sigwarth-software-logo"
+                         src="../static/images/sigwarth_software_logos/sigwarth_software_logo_cropped_transparent.png"
+                         alt="Sigwarth Software Logo"
+                         th:src="@{/images/logo/sigwarth_software_logos/sigwarth_software_logo_cropped_transparent.png}">
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div id="oliver-opening">
+            <div id="oliver-name-div">
+                <h3>Oliver Lear Sigwarth</h3>
+            </div>
+            <div id="oliver-portrait-with-paragraph">
+                <div id="oliver-portrait-div">
+                    <img id="oliver-portrait" src="../static/images/oliver_portrait/oliver_sigwarth_portrait.png"
+                         alt="Oliver Sigwarth Portrait"
+                         th:src="@{/images/oliver_portrait/oliver_sigwarth_portrait.png}">
+                </div>
+                <div id="oliver-paragraph-div">
+                    <p class="indented-text">
+                        I am a software developer with a passion for making tools,
+                        apps, and services. I specialize in web development, but I
+                        have learned many paradigms of development as the leader
+                        and founder of The UWRF Development Team. You can find the
+                        services and projects being worked on by Sigwarth
+                        Software.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
+<section id="experience-section">
+    <div id="experience-title-div">
+        <h4 id="experience-title-text">Experienced In...</h4>
+    </div>
+    <div id="experience-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Java</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/java.png"
+                             alt="Java Logo"
+                             th:src="@{/images/technology_logo/java.png}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Spring Boot</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/java_spring.png"
+                             alt="Spring Boot Logo"
+                             th:src="@{/images/technology_logo/java_spring.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>HTML, CSS, and JavaScript</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/html_css_js.png"
+                             alt="HTML, CSS, and JavaScript Logo"
+                             th:src="@{/images/technology_logo/html_css_js.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Terminal</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/terminal.png"
+                             alt="Terminal Logo"
+                             th:src="@{/images/technology_logo/terminal.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>TypeScript</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/typescript.png"
+                             alt="TypeScript Logo"
+                             th:src="@{/images/technology_logo/typescript.svg}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Git</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/git.png"
+                             alt="Git Logo"
+                             th:src="@{/images/technology_logo/git.png}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>OpenAI API</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/openai_api.png"
+                             alt="OpenAI API Logo"
+                             th:src="@{/images/technology_logo/openai_api.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Bootstrap</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/bootstrap.png"
+                             alt="Bootstrap Logo"
+                             th:src="@{/images/technology_logo/bootstrap.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>SCSS</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/scss.png"
+                             alt="SCSS Logo"
+                             th:src="@{/images/technology_logo/scss.png}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Python</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/python.png"
+                             alt="Python Logo"
+                             th:src="@{/images/technology_logo/python.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>AWS</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/aws.jpg"
+                             alt="AWS Logo"
+                             th:src="@{/images/technology_logo/aws.jpg}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>Azure</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/azure.png"
+                             alt="Azure Logo"
+                             th:src="@{/images/technology_logo/azure.png}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>React.js</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/react.png"
+                             alt="React Logo"
+                             th:src="@{/images/technology_logo/react.png}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>MySQL</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/mysql.png"
+                             alt="MySQL Logo"
+                             th:src="@{/images/technology_logo/mysql.png}">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item technology-logo-div">
+                <div class="technology-item-container">
+                    <div>
+                        <h5>H2</h5>
+                    </div>
+                    <div>
+                        <img src="../static/images/technology_logo/h2.svg"
+                             alt="H2 Logo"
+                             th:src="@{/images/technology_logo/h2.svg}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#experience-carousel"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#experience-carousel"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</section>
 <footer>
     <section id="footer-small-text-section">
         <div id="footer-left-text-item">
