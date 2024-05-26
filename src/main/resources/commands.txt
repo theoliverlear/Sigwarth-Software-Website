@@ -1,2 +1,4 @@
 npx webpack --watch --config webpack.config.js
 npx sass --load-path="/home/ubuntu/WebServer/Sigwarth-Software-Website/node_modules"
+
+alias ssoftware="cd ~/Webserver/Sigwarth-Software-Website; git pull; cd src/main/resources/static/style; cd ../../../../..; npx sass --load-path=\"/home/ubuntu/WebServer/Sigwarth-Software-Website/node_modules\" global-style.scss global-style.css; npx sass --load-path=\"/home/ubuntu/WebServer/Sigwarth-Software-Website/node_modules\" home-style.scss home-style.css; npx sass --load-path=\"/home/ubuntu/WebServer/Sigwarth-Software-Website/node_modules\" home-carousel-style.scss home-carousel-style.css; mvn compile; mvn spring-boot:run;
