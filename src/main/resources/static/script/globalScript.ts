@@ -31,7 +31,7 @@ function buttonIsHamburgerMenu() {
 }
 function toggleNavBarItems(): void {
     if (buttonIsHamburgerMenu()) {
-        if (window.innerWidth > 1300) {
+        if (window.innerWidth >= 1300) {
             setServicesArrowDownIcon();
             if (hamburgerListItems.css('display') === 'none') {
                 hamburgerListItems.fadeIn().css('display', 'flex');
@@ -84,7 +84,7 @@ function fadeInServicesArrow() {
 }
 function routeDisplayServices(): void {
     let servicesDropdownVisible: boolean = servicesDropdown.is(':visible');
-    if (window.innerWidth > 920) {
+    if (window.innerWidth >= 1300) {
         if (servicesDropdownVisible) {
             hideServices();
         } else {
