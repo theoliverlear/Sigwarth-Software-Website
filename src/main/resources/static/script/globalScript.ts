@@ -1,14 +1,29 @@
+const servicesDropdown: JQuery<HTMLElement> = $('#services-dropdown');
+const upArrowSrc: string = '../images/icon/arrow/up_arrow.svg';
+const downArrowSrc: string = '../images/icon/arrow/down_arrow.svg';
+const backArrowSrc: string = '../images/icon/arrow/back_arrow.svg';
+const forwardArrowSrc: string = '../images/icon/arrow/forward_arrow.svg';
+const hamburgerMenuSrc: string = '../images/icon/hamburger_menu.svg';
+const navBarTexts: string[] = ['Home', 'Services', 'Projects', 'About', 'Contact'];
+const servicesTexts: string[] = ['Crypto Trader', 'Sigwarth Home Tools', 'AI Baby Name Generator', 'Dota Data Hub', 'See All Services'];
+let navBarItemTexts: JQuery<HTMLElement> = $('.nav-bar-item-text');
+let navServicesDropdown: JQuery<HTMLElement> = $('#nav-services-dropdown');
+let servicesArrowIcon: JQuery<HTMLElement> = $('#services-arrow-icon');
+let hamburgerIcon: JQuery<HTMLElement> = $('#hamburger-menu-icon');
 // Disable all img from being dragged
 const images: HTMLCollectionOf<HTMLImageElement> = document.getElementsByTagName('img');
 for (let image of Array.from(images)) {
     image.draggable = false;
 }
 let hamburgerListItems: JQuery<HTMLElement> = $('.hamburger-list-items');
+let experienceSection: JQuery<HTMLElement> = $('#experience-section');
 let body: JQuery<HTMLElement> = $('body');
 function fullScreenNavFadeIn(): void {
+    experienceSection.hide();
     $(this).addClass('full-screen-nav').fadeIn(400);
 }
 function fullScreenNavFadeOut(): void {
+    experienceSection.show();
     $(this).removeClass('full-screen-nav').fadeIn(400);
 }
 function buttonIsHamburgerMenu() {
@@ -132,17 +147,6 @@ function hideServices(): void {
         });
     }
 }
-const servicesDropdown: JQuery<HTMLElement> = $('#services-dropdown');
-const upArrowSrc: string = '../static/images/icon/arrow/up_arrow.svg';
-const downArrowSrc: string = '../static/images/icon/arrow/down_arrow.svg';
-const backArrowSrc: string = '../static/images/icon/arrow/back_arrow.svg';
-const forwardArrowSrc: string = '../static/images/icon/arrow/forward_arrow.svg';
-const hamburgerMenuSrc: string = '../static/images/icon/hamburger_menu.svg';
-const navBarTexts: string[] = ['Home', 'Services', 'Projects', 'About', 'Contact'];
-const servicesTexts: string[] = ['Crypto Trader', 'Sigwarth Home Tools', 'AI Baby Name Generator', 'Dota Data Hub', 'See All Services'];
-let navBarItemTexts: JQuery<HTMLElement> = $('.nav-bar-item-text');
-let navServicesDropdown: JQuery<HTMLElement> = $('#nav-services-dropdown');
-let servicesArrowIcon: JQuery<HTMLElement> = $('#services-arrow-icon');
-let hamburgerIcon: JQuery<HTMLElement> = $('#hamburger-menu-icon');
+
 hamburgerIcon.on('click', toggleNavBarItems);
 navServicesDropdown.on('click', routeDisplayServices);
