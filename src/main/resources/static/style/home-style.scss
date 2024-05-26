@@ -122,14 +122,14 @@
         }
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
     .mobile-view {
         #introduction-section {
             #sigwarth-software-opening {
                 #sigwarth-software-title-text {
                     padding: $half-percent;
                     h2 {
-                        font-size: calc($h3-font-size);
+                        font-size: calc($h4-font-size * 1.35);
                     }
                 }
                 #sigwarth-software-logo-with-list {
