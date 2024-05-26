@@ -280,6 +280,10 @@ footer {
             @include size(100%, 100%);
             flex: 1;
             padding: $zero $one-percent;
+            .footer-item {
+                text-align: center;
+                @include flex(center, center, row);
+            }
         }
         #footer-left-text-item {
             border-right: $thin-border solid $pristine-white;
