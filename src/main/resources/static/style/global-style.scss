@@ -69,11 +69,13 @@ html {
 /*================================-Nav-Bar-=================================*/
 header {
     height: calc(((8vh + 3.5vw) / 2) + 1em);
+    max-height: 130px;
     width: 100%;
     top: 0;
     left: 0;
     @include basic-margin-padding(0, 0);
     nav {
+        max-height: 130px;
         background-color: $charcoal-dust;
         height: calc(((8vh + 3.5vw) / 2) + 1em);
         width: 100%;
