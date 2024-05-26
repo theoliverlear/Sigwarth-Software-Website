@@ -100,7 +100,7 @@ function routeDisplayServices(): void {
     }
 }
 function displayServices(): void {
-    if (window.innerWidth > 920) {
+    if (window.innerWidth >= 1300) {
         fadeServicesArrowUpIcon();
         servicesDropdown.fadeIn('fast');
     } else {
@@ -127,7 +127,7 @@ function backArrowToHamburger(): void {
     });
 }
 function hideServices(): void {
-    if (window.innerWidth > 920) {
+    if (window.innerWidth >= 1300) {
         fadeServicesArrowDownIcon();
         servicesDropdown.fadeOut('fast');
     } else {
