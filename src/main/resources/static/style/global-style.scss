@@ -204,20 +204,25 @@ img {
                 @include size(100%, 100%);
             }
         }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            @include flex(center, center, column);
-            @include size(100%, 100%);
-            #nav-container {
-                @include flex(space-around, center, column);
+        header {
+            max-height: none;
+            nav {
+                max-height: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+                @include flex(center, center, column);
                 @include size(100%, 100%);
+                #nav-container {
+                    @include flex(space-around, center, column);
+                    @include size(100%, 100%);
+                }
             }
         }
+
         #nav-services-dropdown {
             margin-left: $three-percent;
         }
