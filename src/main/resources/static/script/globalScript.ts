@@ -4,6 +4,7 @@ const downArrowSrc: string = '../images/icon/arrow/down_arrow.svg';
 const backArrowSrc: string = '../images/icon/arrow/back_arrow.svg';
 const forwardArrowSrc: string = '../images/icon/arrow/forward_arrow.svg';
 const hamburgerMenuSrc: string = '../images/icon/hamburger_menu.svg';
+const hamburgerMenuEndingSrc: string = 'hamburger_menu.svg';
 const navBarTexts: string[] = ['Home', 'Services', 'Projects', 'About', 'Contact'];
 const servicesTexts: string[] = ['Crypto Trader', 'Sigwarth Home Tools', 'AI Baby Name Generator', 'Dota Data Hub', 'See All Services'];
 let navBarItemTexts: JQuery<HTMLElement> = $('.nav-bar-item-text');
@@ -26,12 +27,12 @@ function fullScreenNavFadeOut(): void {
     experienceSection.show();
     $(this).removeClass('full-screen-nav').fadeIn(400);
 }
-function buttonIsHamburgerMenu() {
-    return hamburgerIcon.attr('src') === hamburgerMenuSrc;
+function buttonIsHamburgerMenu(): boolean {
+    return hamburgerIcon.attr('src').includes(hamburgerMenuEndingSrc);
 }
 function toggleNavBarItems(): void {
     if (buttonIsHamburgerMenu()) {
-        if (window.innerWidth >= 1300) {
+        if (window.innerWidth > 1300) {
             setServicesArrowDownIcon();
             if (hamburgerListItems.css('display') === 'none') {
                 hamburgerListItems.fadeIn().css('display', 'flex');
@@ -84,7 +85,7 @@ function fadeInServicesArrow() {
 }
 function routeDisplayServices(): void {
     let servicesDropdownVisible: boolean = servicesDropdown.is(':visible');
-    if (window.innerWidth >= 1300) {
+    if (window.innerWidth > 1300) {
         if (servicesDropdownVisible) {
             hideServices();
         } else {
@@ -100,7 +101,7 @@ function routeDisplayServices(): void {
     }
 }
 function displayServices(): void {
-    if (window.innerWidth >= 1300) {
+    if (window.innerWidth > 1300) {
         fadeServicesArrowUpIcon();
         servicesDropdown.fadeIn('fast');
     } else {
@@ -127,7 +128,7 @@ function backArrowToHamburger(): void {
     });
 }
 function hideServices(): void {
-    if (window.innerWidth >= 1300) {
+    if (window.innerWidth > 1300) {
         fadeServicesArrowDownIcon();
         servicesDropdown.fadeOut('fast');
     } else {
