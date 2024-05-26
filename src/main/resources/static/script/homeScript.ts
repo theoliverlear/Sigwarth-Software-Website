@@ -24,7 +24,7 @@ function typeText(textToType: string, elementToType: JQuery<HTMLElement>): Promi
     return typeChar(); // Kick off recursive typing and return promise.
 }
 
-$(document).ready(function (): void {
+$(document).ready(function(): void {
     typeText(softwareDevelopmentText, softwareDevelopmentTyped).then(function(): void {
         typeText(webDevelopmentText, webDevelopmentTyped).then(function(): void {
             typeText(leadershipText, leadershipTyped);
@@ -32,7 +32,7 @@ $(document).ready(function (): void {
     });
 });
 function setScreenLayout(): void {
-    if (screenWindow.innerWidth() <= 920) {
+    if (screenWindow.innerWidth() < 1300) {
         body.toggleClass('mobile-view');
     }
 }
