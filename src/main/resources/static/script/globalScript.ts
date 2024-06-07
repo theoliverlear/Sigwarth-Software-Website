@@ -148,6 +148,10 @@ function hideServices(): void {
         });
     }
 }
-
+//-------------------------------Load-Page------------------------------------
+function loadPage(bodyElement: HTMLElement, pageName: string): boolean {
+    return bodyElement.getAttribute('data-page') === pageName;
+}
+export {loadPage};
 hamburgerIcon.on('click', toggleNavBarItems);
 navServicesDropdown.on('click', routeDisplayServices);
