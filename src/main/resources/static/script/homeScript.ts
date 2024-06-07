@@ -1,4 +1,5 @@
 import './homeCarouselScript';
+import {loadPage} from "./globalScript";
 let body = $('body');
 const screenWindow: JQuery<Window> = $(window);
 const softwareDevelopmentText: string = "Software Development";
@@ -23,18 +24,25 @@ function typeText(textToType: string, elementToType: JQuery<HTMLElement>): Promi
     }
     return typeChar(); // Kick off recursive typing and return promise.
 }
-
-$(document).ready(function(): void {
+function typeInitialPageText() {
     typeText(softwareDevelopmentText, softwareDevelopmentTyped).then(function(): void {
         typeText(webDevelopmentText, webDevelopmentTyped).then(function(): void {
             typeText(leadershipText, leadershipTyped);
         });
     });
-});
+}
 function setScreenLayout(): void {
     if (screenWindow.innerWidth() < 1300) {
         body.toggleClass('mobile-view');
     }
 }
-setScreenLayout();
-screenWindow.on('resize', setScreenLayout);
+let shouldLoadPage: boolean = loadPage(document.body, 'home');
+if (shouldLoadPage) {
+    $(document).ready(function (): void {
+        typeInitialPageText();
+        setScreenLayout();
+    });
+}
+if (shouldLoadPage) {
+    screenWindow.on('resize', setScreenLayout);
+}
