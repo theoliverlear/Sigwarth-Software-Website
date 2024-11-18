@@ -1,0 +1,193 @@
+/*================================-Imports-=================================*/
+
+/*---------------------------Custom-Style-Sheets----------------------------*/
+@import "../../styles/global-variables";
+@import "../../styles/global-mixins";
+@import "../../styles/global-functions";
+@import "../../styles/global-placeholders";
+/*--------------------------------Bootstrap---------------------------------*/
+
+/*==============================-Text-Content-==============================*/
+
+/*---------------------------------Heading----------------------------------*/
+h1 {
+    font-weight: 300;
+    font-size: $h1-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+h2 {
+    font-weight: 300;
+    font-size: $h2-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+h3 {
+    font-weight: 300;
+    font-size: $h3-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+h4 {
+    font-weight: 300;
+    font-size: $h4-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+h5 {
+    font-weight: 300;
+    font-size: $h5-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+h6 {
+    font-weight: 300;
+    font-size: $h6-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+/*--------------------------------Area-Text---------------------------------*/
+p {
+    font-weight: 300;
+    font-size: $h6-font-size;
+    color: $absolute-black;
+    @include basic-margin-padding(0, 0);
+}
+/*==========================-Universal-Containers-==========================*/
+//html {
+//    scroll-behavior: smooth;
+//    body {
+//        font-family: $jetbrains-mono-font;
+//        background-color: $less-smokey-white;
+//        min-height: 100vh;
+//        @include basic-margin-padding(0, 0);
+//        @include flex(center, center, column);
+//        main {
+//            width: 100%;
+//            @include flex(center, center, row);
+//        }
+//    }
+//}
+body {
+    @include flex(center, center, column);
+    @include square-size(100%);
+    @include basic-margin-padding(0, 0);
+    min-height: 100vh;
+    app {
+        width: 100%;
+        @include flex(center, center, column);
+        @include basic-margin-padding(0, 0);
+        min-height: 100vh;
+        //max-height: 100vh;
+        //background: radial-gradient(at center, $charcoal 70%, $absolute-black);
+        font-family: $jetbrains-mono-font;
+        background-color: $less-smokey-white;
+        overflow: auto;
+        //flex-grow: 1;
+        main {
+            width: 100%;
+            flex: 1;
+            @include flex(center, center, column);
+        }
+        .scroll-container {
+            @include flex(flex-start, flex-start, column);
+            @extend %nav-bar-padding-top;
+            width: 100%;
+            overflow: scroll;
+            height: auto;
+            flex: 1;
+        }
+        authorize, home, profile, messages {
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1;
+        }
+    }
+}
+
+.stripe {
+    width: 100%;
+    background-color: $charcoal-dust;
+    padding: $one-percent $zero;
+    @include flex(center, center, row);
+    color: $pristine-white;
+
+}
+img {
+    user-select: none;
+}
+#services-arrow-icon {
+    margin-top: $half-percent;
+    margin-left: $half-percent;
+    @include size($one-half-percent, $one-half-percent);
+    height: $two-percent;
+    img {
+        @include size(100%, 100%);
+    }
+}
+@media screen and (max-width: 1300px) {
+    .full-screen-nav {
+        #services-arrow-icon {
+            margin-top: $half-percent;
+            margin-left: $half-percent;
+            width: $two-half-percent;
+            height: $two-half-percent;
+            img {
+                @include size(100%, 100%);
+            }
+        }
+        header {
+            max-height: none;
+            nav {
+                max-height: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+                @include flex(center, center, column);
+                @include size(100%, 100%);
+                #nav-container {
+                    @include flex(space-around, center, column);
+                    @include size(100%, 100%);
+                }
+            }
+        }
+
+        #nav-services-dropdown {
+            margin-left: $three-percent;
+        }
+        .hamburger-list-items {
+            @include flex(center, center, row);
+            width: 100%;
+            h4 {
+                font-size: $h3-font-size;
+                transition: font-size ease-in-out 0.15s;
+            }
+            &:hover {
+                h4 {
+                    font-size: $h2-half-font-size;
+                }
+            }
+        }
+        #hamburger-menu-icon {
+            width: $four-percent;
+            &:hover {
+                width: $five-percent;
+            }
+        }
+        .services-dropdown-div {
+            padding: $zero $one-percent;
+        }
+    }
+}
+hr {
+    border: $thinnest-border solid $charcoal-dust;
+    width: 80%;
+    @include basic-margin-padding($zero, $zero);
+}
+.indented-text {
+    text-indent: $two-percent;
+}
+
