@@ -14,6 +14,7 @@ import {pages} from "../components/pages/pages";
 
 @NgModule({
     declarations: [
+        AppComponent,
         ...directives,
         ...elements,
         ...pages,
