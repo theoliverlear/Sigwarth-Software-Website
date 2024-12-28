@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./",
+    "types": []
+  },
+  "files": [
+    "angular/modules/sigwarth-software.module.ts",
+  ],
+  "include": [
+    "angular/**/*.d.ts"
+  ]
+}

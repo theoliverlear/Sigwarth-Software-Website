@@ -1,0 +1,117 @@
+//=================================-Imports-==================================
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+@import "../../app/app-style.component";
+
+$nav-bar-height: calc(((8vh + 3.5vw) / 2) + 1em);
+/*================================-Nav-Bar-=================================*/
+nav-bar {
+    header {
+        height: calc(((8vh + 3.5vw) / 2) + 1em);
+        max-height: 130px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        @include basic-margin-padding(0, 0);
+        nav {
+            max-height: 130px;
+            background-color: $charcoal-dust;
+            height: calc(((8vh + 3.5vw) / 2) + 1em);
+            width: 100%;
+            top: 0;
+            left: 0;
+            #nav-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                @include basic-margin-padding(0, 0);
+            }
+        }
+    }
+
+
+
+    #nav-services-dropdown {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        h5 {
+            color: $pristine-white;
+        }
+        #services-dropdown-container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: $quarter-percent;
+            z-index: 1;
+            background-color: $charcoal-dust;
+            #services-title-with-dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: $quarter-percent;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            #services-dropdown {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                position: absolute;
+                background-color: $charcoal-dust;
+                padding: $half-percent;
+                &:hover {
+                    cursor: pointer;
+                }
+                div {
+                    width: 100%;
+                    border-radius: $quarter-percent;
+                    &:hover {
+                        background-color: $white;
+                        h5 {
+                            color: $charcoal-dust;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav-bar-item {
+        transition: font-size ease-in-out 0.15s;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        flex-direction: row;
+        h4 {
+            color: $pristine-white;
+            text-align: center;
+        }
+        &:hover, .nav-bar-item-text {
+            font-size: calc(((2.25vh + 2.25vw) / 2) + 0.25em);
+        }
+    }
+    #hamburger-menu-icon {
+        width: $three-percent;
+        height: auto;
+        transition: width ease-in-out 0.15s;
+        &:hover {
+            cursor: pointer;
+            width: $three-half-percent;
+            height: auto;
+        }
+    }
+    #services-with-caret {
+        @include flex(center, center, row);
+    }
+    #see-all-services-text {
+        text-decoration: underline;
+    }
+}
