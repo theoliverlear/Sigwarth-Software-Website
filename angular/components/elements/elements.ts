@@ -6,8 +6,15 @@ import {SsFooterComponent} from "./ss-footer/ss-footer.component";
 import {SsHeadComponent} from "./ss-head/ss-head.component";
 import {SsImgComponent} from "./ss-img/ss-img.component";
 import {TypingTextComponent} from "./typing-text/typing-text.component";
+import {AccordionComponent} from "./accordion/accordion.component";
+import {SubtitleComponent} from "./subtitle/subtitle.component";
+import {SsTitleComponent} from "./ss-title/ss-title.component";
+import {SsParagraphComponent} from "./ss-paragraph/ss-paragraph.component";
+import {HomeAnchorComponent} from "./home-anchor/home-anchor.component";
 
-export const elements: any[] = [
+export const elements = [
+    AccordionComponent,
+    HomeAnchorComponent,
     NavBarComponent,
     SsAnchorComponent,
     SsButtonComponent,
@@ -15,5 +22,8 @@ export const elements: any[] = [
     SsFooterComponent,
     SsHeadComponent,
     SsImgComponent,
+    SsParagraphComponent,
+    SsTitleComponent,
+    SubtitleComponent,
     TypingTextComponent
 ]
