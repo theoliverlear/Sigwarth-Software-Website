@@ -5,8 +5,8 @@ import {routes} from "./routes";
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRouting {
+export class AppRoutingModule {
     constructor() {
-        console.log('AppRouting loaded');
+
     }
 }
