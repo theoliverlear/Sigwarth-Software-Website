@@ -1,0 +1,53 @@
+ // home-anchor.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+home-anchor {
+    //@include square-size(calc($two-half-percent * 1.03));
+    @include square-size($three-half-percent);
+    background-color: $midnight-blue;
+    padding: $half-percent;
+    position: absolute;
+    top: $half-percent;
+    left: $one-percent;
+    @extend %circle-border-radius;
+    box-shadow: none;
+    transition: box-shadow, background-color, color, 0.15s;
+    ss-anchor {
+        ss-img {
+            transition: filter 0.15s;
+        }
+    }
+    &:hover {
+        background-color: $alabaster-stone;
+        box-shadow: $deep-midnight-blue 0 $eighth-percent $eighth-percent $eighth-percent;
+        cursor: pointer;
+        ss-anchor {
+            ss-img {
+                filter: invert(1);
+            }
+        }
+    }
+    &:active {
+        background-color: $soft-blue;
+        box-shadow: $deep-midnight-blue 0 $eighth-percent $quarter-percent $quarter-percent;
+        ss-anchor {
+            ss-img {
+                filter: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    home-anchor {
+        top: $quarter-percent;
+    }
+}
+@media screen and (max-width: 500px) {
+    home-anchor {
+        top: $quarter-percent;
+        left: $half-percent;
+    }
+}
