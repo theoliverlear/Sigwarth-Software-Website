@@ -1,0 +1,39 @@
+// nav-item.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+nav-item {
+    @include flex(center, center, row);
+    padding: $one-percent;
+    border-radius: $one-percent;
+    background-color: $midnight-blue;
+    flex-basis: calc($eight-percent * 1.02);
+    box-shadow: none;
+    transition: box-shadow, background-color, color, 0.15s;
+    ss-anchor {
+        h5 {
+            color: $pristine-white;
+        }
+    }
+    &:hover {
+        ss-anchor {
+            h5 {
+                color: $black;
+            }
+        }
+        background-color: $alabaster-stone;
+        box-shadow: $deep-midnight-blue 0 $eighth-percent $eighth-percent $eighth-percent;
+    }
+    &:active {
+        ss-anchor {
+            h5 {
+                color: $pristine-white;
+            }
+        }
+        cursor: pointer;
+        background-color: $soft-blue;
+        box-shadow: $deep-midnight-blue 0 $eighth-percent $quarter-percent $quarter-percent;
+    }
+}
