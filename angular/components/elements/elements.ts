@@ -11,11 +11,13 @@ import {SubtitleComponent} from "./subtitle/subtitle.component";
 import {SsTitleComponent} from "./ss-title/ss-title.component";
 import {SsParagraphComponent} from "./ss-paragraph/ss-paragraph.component";
 import {HomeAnchorComponent} from "./home-anchor/home-anchor.component";
+import {NavItemComponent} from "./nav-item/nav-item.component";
 
 export const elements = [
     AccordionComponent,
     HomeAnchorComponent,
     NavBarComponent,
+    NavItemComponent,
     SsAnchorComponent,
     SsButtonComponent,
     SsCodeComponent,
