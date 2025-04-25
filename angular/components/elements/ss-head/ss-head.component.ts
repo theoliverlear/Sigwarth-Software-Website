@@ -13,27 +13,17 @@ import {DOCUMENT} from "@angular/common";
     templateUrl: './ss-head.component.html'
 })
 export class SsHeadComponent implements OnChanges{
-    static readonly DEFAULT_STYLESHEETS_PATHS: string[] = [
-        // 'angular_build/styles.css'
-    ];
-    static readonly DEFAULT_FAVICON = 'angular/assets/images/favicon/sigwarth_software_logo_cropped_transparent.ico';
+    static readonly DEFAULT_FAVICON: string = 'assets/favicon/logo.ico';
     @Input() title: string;
     @Input() stylesheets: string[];
     @Input() favicon: string = SsHeadComponent.DEFAULT_FAVICON;
     constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
         console.log('HeadComponent loaded');
         this.addFavicon(this.favicon);
-        SsHeadComponent.DEFAULT_STYLESHEETS_PATHS.forEach((path) => {
-            console.log('Adding default stylesheet: ' + path);
-            this.addStylesheet(path);
-        });
     }
     ngOnChanges(changes: SimpleChanges): void {
         if (changes['title']) {
             this.updateTitle();
-        }
-        if (changes['stylesheets']) {
-            this.updateStylesheets();
         }
     }
     private updateTitle() {
@@ -42,25 +32,7 @@ export class SsHeadComponent implements OnChanges{
             this.document.title = this.title;
         }
     }
-    private updateStylesheets() {
-        console.log('Updating stylesheets: new list: ', this.stylesheets);
-        this.clearExisting('link[data-dynamic]');
-        if (this.stylesheets) {
-            this.stylesheets.forEach((path) => {
-                this.addStylesheet(path);
-            });
-        }
-    }
-    private addStylesheet(path: string) {
-        const link = this.renderer.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = path;
-        this.renderer.setAttribute(link, 'data-dynamic', '');
-        this.renderer.appendChild(this.document.head, link);
-        link.onerror = function() {
-            console.error('Failed to load stylesheet: ' + path);
-        }
-    }
+
     private addFavicon(path: string) {
         const link = this.renderer.createElement('link');
         link.rel = 'icon';
