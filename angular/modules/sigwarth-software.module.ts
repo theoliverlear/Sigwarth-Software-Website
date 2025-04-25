@@ -7,7 +7,7 @@ import {RouterOutlet} from "@angular/router";
 import {NgOptimizedImage} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {AppComponent} from "../components/app/app.component";
-import {AppRouting} from "./routing/app-routing.module";
+import {AppRoutingModule} from "./routing/app-routing.module";
 import {elements} from "../components/elements/elements";
 import {services} from "../services/services";
 import {pages} from "../components/pages/pages";
@@ -23,17 +23,19 @@ import {pages} from "../components/pages/pages";
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
-        AppRouting,
+        AppRoutingModule,
         RouterOutlet,
         NgOptimizedImage,
-        HttpClientModule,
-        ...services],
+        HttpClientModule],
+    providers: [
+        ...services
+    ],
     bootstrap: [AppComponent],
     exports: [],
     schemas: []
 })
 export class SigwarthSoftwareModule {
     constructor() {
-        console.log('SigwarthSoftwareModule loaded');
+
     }
 }
