@@ -1,4 +1,7 @@
-<!--===============================-Nav-Bar-===============================-->
-<header>
-
-</header>
+<!-- nav-bar.component.html -->
+<ng-container>
+    <home-anchor/>
+    <nav>
+        <nav-item *ngFor="let link of navBarLinks" [elementLink]="link"/>
+    </nav>
+</ng-container>
