@@ -27,14 +27,21 @@
               }
             ],
             "styles": [
-              "angular/components/app/app-style.component.css",
-              "angular/components/elements/ss-anchor/ss-anchor-style.component.css",
-              "angular/components/elements/ss-button/ss-button-style.component.css",
-              "angular/components/elements/ss-code/ss-code-style.component.css",
-              "angular/components/elements/ss-footer/ss-footer-style.component.css",
-              "angular/components/elements/ss-img/ss-img-style.component.css",
-              "angular/components/elements/typing-text/typing-text-style.component.css",
-              "angular/components/pages/home/home-style.component.css"
+              "angular/components/app/app.component.css",
+              "angular/components/elements/accordion/accordion.component.css",
+              "angular/components/elements/home-anchor/home-anchor.component.css",
+              "angular/components/elements/nav-bar/nav-bar.component.css",
+              "angular/components/elements/nav-item/nav-item.component.css",
+              "angular/components/elements/ss-anchor/ss-anchor.component.css",
+              "angular/components/elements/ss-button/ss-button.component.css",
+              "angular/components/elements/ss-code/ss-code.component.css",
+              "angular/components/elements/ss-footer/ss-footer.component.css",
+              "angular/components/elements/ss-img/ss-img.component.css",
+              "angular/components/elements/ss-paragraph/ss-paragraph.component.css",
+              "angular/components/elements/ss-title/ss-title.component.css",
+              "angular/components/elements/subtitle/subtitle.component.css",
+              "angular/components/elements/typing-text/typing-text.component.css",
+              "angular/components/pages/home/home.component.css"
             ],
             "scripts": [],
             "fileReplacements": []
