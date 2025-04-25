@@ -79,10 +79,11 @@ body {
         @include basic-margin-padding(0, 0);
         min-height: 100vh;
         //max-height: 100vh;
-        //background: radial-gradient(at center, $charcoal 70%, $absolute-black);
+        background: radial-gradient(circle, $midnight-blue 1%, $charcoal 90%);
         font-family: $jetbrains-mono-font;
-        background-color: $less-smokey-white;
         overflow: auto;
+        //background-size: 200% 400%;
+        //animation: shifting-gradient 50s infinite ease-in-out;
         //flex-grow: 1;
         main {
             width: 100%;
@@ -91,17 +92,31 @@ body {
         }
         .scroll-container {
             @include flex(flex-start, flex-start, column);
-            @extend %nav-bar-padding-top;
+            //@extend %nav-bar-padding-top;
             width: 100%;
-            overflow: scroll;
+            overflow-x: auto;
+            overflow-y: scroll;
             height: auto;
             flex: 1;
         }
-        authorize, home, profile, messages {
+        home {
             width: 100%;
             box-sizing: border-box;
             flex: 1;
         }
+    }
+}
+
+#particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    
+    canvas {
+        filter: blur(1px) brightness(1.2);
     }
 }
 
