@@ -1,0 +1,50 @@
+// accordion.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+accordion {
+    @include flex(center, center, column);
+    //width: $fifteen-percent;
+    min-height: $three-percent;
+    background-color: $neutral-black;
+    width: 90%;
+    color: $pristine-white;
+    padding: $quarter-percent;
+    @extend %soft-border-radius;
+    .accordion-top-row {
+        @include flex(flex-start, center, row);
+        width: 100%;
+    }
+    .accordion-title-div {
+        width: 100%;
+    }
+    ss-img {
+        @include square-size($one-half-percent);
+        margin: 0 $three-quarter-percent;
+        //background-image: radial-gradient($falcon-red, $neutral-black);
+        //background-image: radial-gradient($alabaster-stone, $neutral-black);
+        background-image: radial-gradient($charcoal, $light-charcoal);
+        padding: $half-percent;
+        @extend %circle-border-radius;
+    }
+    &:active {
+        ss-img {
+            //animation: rotate-img 0.5s;
+        }
+    }
+    &.accordion-triggered {
+        ss-img {
+            animation: rotate-img 0.5s forwards;
+        }
+    }
+}
+@keyframes rotate-img {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
